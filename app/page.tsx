@@ -40,7 +40,7 @@ export default function Home() {
               </div>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-              Hi, I'm{" "}
+              Hi, I&apos;m{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Abhinay Jangde
               </span>
@@ -92,10 +92,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                I'm a passionate Full-Stack Software Engineer and educator dedicated to teaching "the right way to learn coding." As the creator of CodeBhaiya, I've built an educational platform that helps thousands of students master programming concepts through practical, hands-on learning.
+                I&apos;m a passionate Full-Stack Software Engineer and educator dedicated to teaching &quot;the right way to learn coding.&quot; As the creator of CodeBhaiya, I&apos;ve built an educational platform that helps thousands of students master programming concepts through practical, hands-on learning.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-                I'm also a YouTube content creator (@AbhinayJangde) where I share programming tutorials and tech insights. My mission is to make coding education accessible and effective for everyone, combining my technical expertise with my passion for teaching.
+                I&apos;m also a YouTube content creator (@AbhinayJangde) where I share programming tutorials and tech insights. My mission is to make coding education accessible and effective for everyone, combining my technical expertise with my passion for teaching.
               </p>
               <div className="flex flex-wrap gap-4">
                 <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium">
@@ -201,7 +201,7 @@ export default function Home() {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">CodeBhaiya</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Educational platform teaching "the right way to learn coding" with courses in Python, DevOps, and Matrix Web Development.
+                  Educational platform teaching &quot;the right way to learn coding&quot; with courses in Python, DevOps, and Matrix Web Development.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded text-xs">Next.js</span>
@@ -282,12 +282,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Let's Work Together
+              Let&apos;s Work Together
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              I'm always interested in new opportunities and interesting projects. 
-              Let's discuss how we can bring your ideas to life!
+              I&apos;m always interested in new opportunities and interesting projects. 
+              Let&apos;s discuss how we can bring your ideas to life!
             </p>
           </div>
           <div className="max-w-2xl mx-auto">
