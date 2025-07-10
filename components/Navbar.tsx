@@ -13,8 +13,8 @@ export default function Navbar() {
     };
 
     return (
-        <header className="sticky top-0 z-[20] md:mx-80 border-b border-b-gray-200">
-            <nav className="container bg-white mx-auto w-full flex items-center justify-between py-2 px-4">
+        <header className="sticky top-0 z-[20] border-b border-b-gray-200">
+            <nav className="bg-white mx-auto w-full flex items-center justify-between py-2 px-4">
                 <div className="">
                     <Link
                         href="/"
@@ -69,22 +69,25 @@ export default function Navbar() {
 
             </nav>
                 {isOpen && (
-                    <div className="flex md:hidden bg-white flex-col md:flex-row md:space-x-2 items-end font-semibold">
+                    <div className="flex absolute w-full md:hidden bg-white flex-col md:flex-row md:space-x-2 items-end font-semibold mb-2">
                         <Link
                             href="/"
                             className="hover:bg-gray-100 px-4 py-2 rounded-full"
+                            onClick={toggleNavbar}
                         >
                             Home
                         </Link>
                         <Link
                             href="/projects"
                             className="hover:bg-gray-100 px-4 py-2 rounded-full"
+                            onClick={toggleNavbar}
                         >
                             Projects
                         </Link>
                         <Link
                             href="/blogs"
                             className="hover:bg-gray-100 px-4 py-2 rounded-full"
+                            onClick={toggleNavbar}
                         >
                             Blogs
                         </Link>
