@@ -1,0 +1,10 @@
+node_modules/.vscode
+/node_modules
+./dist
+.next
+*.yml
+*.yaml
+
+*.env
+.env
+.env.*
