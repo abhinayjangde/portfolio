@@ -1,3 +1,5 @@
+import Achievements from "@/components/Achievements";
+import RecentWorks from "@/components/RecentWorks";
 import Skills from "@/components/Skills";
 import Socials from "@/components/Socials";
 import WhoAmI from "@/components/WhoAmI";
@@ -8,6 +10,8 @@ export default function Home() {
             <WhoAmI/>
             <Socials/>
             <Skills/>
+            <RecentWorks/>
+            <Achievements/>
         </main>
     );
 }
