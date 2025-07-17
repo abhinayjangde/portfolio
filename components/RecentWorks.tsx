@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import imgCodebhaiya from "@/public/codebhaiya.png";
 import imgPeertodo from "@/public/peertodo.png";
-
+import imgCapstone from "@/public/capstone.png"
 const recentProject = [
     {
         id: 1,
         title: "CodeBhaiya",
-        description: "The right way to learn coding",
-        techstack: ["Next.js", "Tailwind", "Mongodb"],
+        description: "Full Stack Web App where user with create role can write blogs",
+        techstack: ["Next.js", "Tailwind", "Mongodb", "OAuth"],
         thumbnailUrl: imgCodebhaiya,
         githubUrl: "https://github.com/abhinayjangde/codebhaiya",
         liveLink: "https://codebhaiya.com",
@@ -16,11 +16,20 @@ const recentProject = [
     {
         id: 2,
         title: "PeerTodo",
-        description: "Organize Your Life with Smart Todos",
+        description: "Organize Your Life with Smart Todos - FullStack Todo App",
         techstack: ["Nodejs", "Express", "Tailwind", "Mongodb"],
         thumbnailUrl: imgPeertodo,
         githubUrl: "https://github.com/abhinayjangde/peer-todo",
         liveLink: "https://todo.codebhaiya.com",
+    },
+    {
+        id: 3,
+        title: "Capstone",
+        description: "This AI resume roast - complete backend build with FastAPI and OpenAI API",
+        techstack: ["FastAPI", "Mongodb", "Docker", "Valkey"],
+        thumbnailUrl: imgCapstone,
+        githubUrl: "https://github.com/abhinayjangde/capstone",
+        liveLink: "/",
     },
 ];
 
@@ -67,13 +76,15 @@ export default function RecentWorks() {
                         <div className="flex md:flex-col justify-center md:justify-evenly p-4 md:p-6 space-x-4 md:space-x-0 md:space-y-4">
                             <Link 
                                 href={project.githubUrl}
-                                className="text-center bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors"
+                                target="_blank"
+                                className="text-center border border-gray-400 bg-gray-100 hover:bg-gray-200 px-4 py-1 rounded-lg transition-colors"
                             >
                                 GitHub
                             </Link>
                             <Link 
                                 href={project.liveLink}
-                                className="text-center bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors"
+                                target="_blank"
+                                className="text-center border border-gray-400 bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded-lg transition-colors"
                             >
                                 Live
                             </Link>
