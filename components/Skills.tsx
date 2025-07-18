@@ -15,6 +15,7 @@ import { FaGitAlt } from "react-icons/fa";
 import { FaDigitalOcean } from "react-icons/fa";
 import { FcLinux } from "react-icons/fc";
 import { SiFastapi } from "react-icons/si";
+import { PiOpenAiLogo } from "react-icons/pi";
 
 export default function Skills() {
     return (
@@ -38,6 +39,7 @@ export default function Skills() {
                 <TbBrandCpp className="w-10 hover:scale-110 transition-all duration-300" />
                 <FaPython className="w-8 hover:scale-110 transition-all duration-300" />
                 <SiFastapi className="w-8 hover:scale-110 transition-all duration-300 text-[#0098FF]" />
+                <PiOpenAiLogo className="w-8 hover:scale-110 transition-all duration-300"  />
             </div>
         </section>
     );
