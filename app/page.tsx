@@ -29,11 +29,11 @@ const recentProject: IProjects[] = [
     },
     {
         id: 3,
-        title: "Capstone",
+        title: "Crastone",
         description: "This AI resume roast - complete backend build with FastAPI and OpenAI API",
         techstack: ["FastAPI", "Mongodb", "Docker", "Valkey"],
         thumbnailUrl: imgCapstone,
-        githubUrl: "https://github.com/abhinayjangde/capstone",
+        githubUrl: "https://github.com/abhinayjangde/crastone",
         liveLink: "/",
     },
 ];
