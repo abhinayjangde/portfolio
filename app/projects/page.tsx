@@ -9,7 +9,7 @@ const projects: IProjects[] = [
         id: 1,
         title: "CodeBhaiya",
         description:
-            "Full Stack Web App where user with create role can write blogs",
+            "Full Stack Web App where user with creater role can write blogs",
         techstack: ["Next.js", "Tailwind", "Mongodb", "OAuth"],
         thumbnailUrl: imgCodebhaiya,
         githubUrl: "https://github.com/abhinayjangde/codebhaiya",
