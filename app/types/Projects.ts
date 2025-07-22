@@ -9,4 +9,5 @@ export interface IProjects {
     thumbnailUrl: string | StaticImageData,
     githubUrl: string,
     liveLink: string
+    isWorking?: boolean
 }

@@ -2,9 +2,21 @@ import RecentWorks from "@/components/RecentWorks";
 import imgCodebhaiya from "@/public/codebhaiya.png";
 import imgPeertodo from "@/public/peertodo.png";
 import imgCapstone from "@/public/capstone.png";
+import imgCodelayer from "@/public/codelayer.png";
+
 import { IProjects } from "@/app/types/Projects";
 
 const projects: IProjects[] = [
+    {
+        id: 4,
+        title: "CodeLayer",
+        description: "Full Stack Leetcode Clone with AI Help Assistant",
+        techstack: ["Next.js", "PrismaORM", "PostgreSQL", "Judge0", "Docker"],
+        thumbnailUrl: imgCodelayer,
+        githubUrl: "https://github.com/abhinayjangde/codelayer",
+        liveLink: "/",
+        isWorking: true,
+    },
     {
         id: 1,
         title: "CodeBhaiya",
@@ -14,6 +26,7 @@ const projects: IProjects[] = [
         thumbnailUrl: imgCodebhaiya,
         githubUrl: "https://github.com/abhinayjangde/codebhaiya",
         liveLink: "https://codebhaiya.com",
+        isWorking: false,
     },
     {
         id: 2,
@@ -23,6 +36,7 @@ const projects: IProjects[] = [
         thumbnailUrl: imgPeertodo,
         githubUrl: "https://github.com/abhinayjangde/peer-todo",
         liveLink: "https://todo.codebhaiya.com",
+        isWorking: false,
     },
     {
         id: 3,
@@ -33,6 +47,7 @@ const projects: IProjects[] = [
         thumbnailUrl: imgCapstone,
         githubUrl: "https://github.com/abhinayjangde/crastone",
         liveLink: "/",
+        isWorking: false,
     },
 ];
 

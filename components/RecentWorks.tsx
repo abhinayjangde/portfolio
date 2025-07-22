@@ -26,7 +26,7 @@ export default function RecentWorks({projects, title}:{projects: IProjects[], ti
 
                         <div className="flex flex-col justify-center flex-1 p-4 space-y-2">
                             <h2 className="text-xl md:text-2xl font-semibold">
-                                {project.title}
+                                {project.title} {project.isWorking && <span className="text-green-500 text-sm">(Working on)</span>}
                             </h2>
                             <p className="text-base md:text-xl text-gray-600">
                                 {project.description}
