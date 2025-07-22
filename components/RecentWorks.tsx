@@ -5,14 +5,14 @@ import Link from "next/link";
 
 export default function RecentWorks({projects, title}:{projects: IProjects[], title: string}) {
     return (
-        <section className="my-4 container">
+        <section className="my-4 container ">
             <h2 className="text-3xl md:text-4xl my-4 md:border-none border-b-1 border-b-gray-200">
                 {title}
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-4 ">
                 {projects.map((project) => (
                     <div
-                        className="flex flex-col md:flex-row border rounded-lg overflow-hidden"
+                        className="flex flex-col md:flex-row border rounded-lg overflow-hidden "
                         key={project.id}
                     >
                         <div className="relative w-full md:w-60 h-48 md:h-auto">
@@ -22,11 +22,12 @@ export default function RecentWorks({projects, title}:{projects: IProjects[], ti
                                 fill
                                 className="object-cover"
                             />
+                             {project.isWorking && <span className="text-md absolute right-2 px-2 bg-gray-200 border rounded-full top-2 text-black">working</span>}
                         </div>
 
                         <div className="flex flex-col justify-center flex-1 p-4 space-y-2">
                             <h2 className="text-xl md:text-2xl font-semibold">
-                                {project.title} {project.isWorking && <span className="text-green-500 text-sm">(Working on)</span>}
+                                {project.title}
                             </h2>
                             <p className="text-base md:text-xl text-gray-600">
                                 {project.description}
@@ -35,7 +36,7 @@ export default function RecentWorks({projects, title}:{projects: IProjects[], ti
                                 {project.techstack.map((tech, index) => (
                                     <span 
                                         key={index}
-                                        className="border border-gray-200 rounded-2xl px-2 py-1 text-sm"
+                                        className="border border-gray-400 rounded-2xl px-2 py-1 text-sm"
                                     >
                                         {tech}
                                     </span>
@@ -59,6 +60,7 @@ export default function RecentWorks({projects, title}:{projects: IProjects[], ti
                                 Live
                             </Link>
                         </div>
+                       
                     </div>
                 ))}
             </div>
