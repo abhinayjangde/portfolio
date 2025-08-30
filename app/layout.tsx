@@ -27,15 +27,16 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased md:mx-80`}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}
             >
                 {" "}
-                <main className="container mx-auto">
+                <div className="max-w-6xl mx-auto">
                     <Navbar />
-
-                    {children}
+                    <main className="min-h-screen">
+                        {children}
+                    </main>
                     <Footer />
-                </main>
+                </div>
             </body>
         </html>
     );

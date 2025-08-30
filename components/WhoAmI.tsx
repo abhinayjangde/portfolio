@@ -1,12 +1,18 @@
 
 
 export default function WhoAmI(){
-
     return (
-        <section className="my-4">
-            <h2 className="text-3xl md:text-4xl my-4 md:border-none border-b-1 border-b-gray-200">whoami</h2>
-            <div className="flex flex-col space-y-2">
-                <p>Hi👋, I&apos;m Abhinay Jangde - a passionate Full Stack Developer.  I thrive on the dynamic intersection of coding, technology, and education.</p>
+        <section className="text-center py-12">
+            <div className="mb-8">
+                <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-300 to-neutral-900 bg-clip-text text-transparent mb-4">
+                    Abhinay Jangde
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-600 font-light">
+                    Full Stack Developer
+                </p>
+            </div>
+            <div className="max-w-2xl mx-auto space-y-4 text-lg leading-relaxed text-gray-700">
+                <p>Hi👋, I'm a passionate Full Stack Developer who thrives on the dynamic intersection of coding, technology, and education.</p>
                 <p>In my free time I love watching movies.</p>
             </div>
         </section>

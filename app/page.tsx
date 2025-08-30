@@ -40,12 +40,14 @@ const recentProject: IProjects[] = [
 
 export default function Home() {
     return (
-        <main className="p-1">
-            <WhoAmI/>
-            <Socials/>
-            <Skills/>
-            <RecentWorks projects ={recentProject} title={"recent works"}/>
-            <Achievements/>
+        <main className="min-h-screen">
+            <div className="max-w-4xl mx-auto px-6 py-8 space-y-16">
+                <WhoAmI/>
+                <Socials/>
+                <Skills/>
+                <RecentWorks projects={recentProject} title={"recent works"}/>
+                <Achievements/>
+            </div>
         </main>
     );
 }

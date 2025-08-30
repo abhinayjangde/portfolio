@@ -19,27 +19,27 @@ import { PiOpenAiLogo } from "react-icons/pi";
 
 export default function Skills() {
     return (
-        <section className="my-4">
-            <h2 className="text-3xl md:text-4xl my-4 md:border-none border-b-1 border-b-gray-200">skills</h2>
-            <div className="flex flex-wrap space-y-2 text-4xl space-x-2">
-                <BiLogoTypescript className="w-10 hover:scale-110 transition-all duration-300 text-blue-500" />
-                <RiNextjsFill className="w-12 hover:scale-110 transition-all duration-300" />
-                <IoLogoJavascript className="w-10 hover:scale-110 transition-all duration-300 text-[#F0DB4F]" />
-                <FaReact className="w-10 hover:scale-110 transition-all duration-300 text-[#61dbfb]" />
-                <FaNodeJs className="w-10 hover:scale-110 transition-all duration-300 text-[#3C873A]" />
-                <SiExpress className="w-10 hover:scale-110 transition-all duration-300" />
-                <FaDocker className="w-10 hover:scale-110 transition-all duration-300 text-[#1D63ED]" />
-                <FaAws className="w-10 hover:scale-110 transition-all duration-300" />
-                <SiMongodb className="w-10 hover:scale-110 transition-all duration-300 text-[#00684A]" />
-                <SiPostgresql className="w-8 hover:scale-110 transition-all duration-300 text-[#336791]" />
-                <RiTailwindCssFill className="w-10 hover:scale-110 transition-all duration-300 text-[#1f2937]" />
-                <FaGitAlt className="w-10 hover:scale-110 transition-all duration-300 text-[#f14e32]" />
-                <FaDigitalOcean className="w-8 hover:scale-110 transition-all duration-300 text-[#008bcf]" />
-                <FcLinux className="w-10 hover:scale-110 transition-all duration-300 text-yellow-400" />
-                <TbBrandCpp className="w-10 hover:scale-110 transition-all duration-300" />
-                <FaPython className="w-8 hover:scale-110 transition-all duration-300" />
-                <SiFastapi className="w-8 hover:scale-110 transition-all duration-300 text-[#0098FF]" />
-                <PiOpenAiLogo className="w-8 hover:scale-110 transition-all duration-300"  />
+        <section className="py-8 border-b border-b-gray-300 pb-2">
+            <h2 className="text-3xl md:text-4xl my-4 md:border-none  border-b-1 border-b-gray-200">skills & technologies</h2>
+            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-8 justify-items-center">
+                <BiLogoTypescript className="w-12 h-12 hover:scale-125 transition-all duration-300 text-blue-500 drop-shadow-lg" />
+                <RiNextjsFill className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
+                <IoLogoJavascript className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#F0DB4F] drop-shadow-lg" />
+                <FaReact className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#61dbfb] drop-shadow-lg" />
+                <FaNodeJs className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#3C873A] drop-shadow-lg" />
+                <SiExpress className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
+                <FaDocker className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#1D63ED] drop-shadow-lg" />
+                <FaAws className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
+                <SiMongodb className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#00684A] drop-shadow-lg" />
+                <SiPostgresql className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#336791] drop-shadow-lg" />
+                <RiTailwindCssFill className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#1f2937] drop-shadow-lg" />
+                <FaGitAlt className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#f14e32] drop-shadow-lg" />
+                <FaDigitalOcean className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#008bcf] drop-shadow-lg" />
+                <FcLinux className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
+                <TbBrandCpp className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
+                <FaPython className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
+                <SiFastapi className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#0098FF] drop-shadow-lg" />
+                <PiOpenAiLogo className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
             </div>
         </section>
     );

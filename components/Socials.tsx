@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 
 export default function Socials() {
     return (
-        <section className="my-4">
+        <section className="my-4 border-b border-b-gray-300 pb-2">
             <h2 className="text-3xl md:text-4xl my-4 md:border-none  border-b-1 border-b-gray-200">socials</h2>
             <div className="flex text-3xl space-x-2 ml-1">
                 <Link className="w-10 hover:scale-110 transition-all duration-300 text-[#0077B5]" href="https://www.linkedin.com/in/abhinay-jangde-a195011b9/">
