@@ -41,8 +41,12 @@ export default function Navbar() {
                 </div>
 
                 {/* Conditional Rendering  */}
+
                 <div className="flex gap-2">
-                    {isOpen && <VscColorMode className="text-3xl" />}
+                    <VscColorMode
+                        onClick={toggleTheme}
+                        className="text-3xl md:hidden"
+                    />
                     {isOpen ? (
                         <IoCloseSharp
                             onClick={toggleNavbar}
@@ -55,6 +59,7 @@ export default function Navbar() {
                         />
                     )}
                 </div>
+
                 <div className="hidden md:flex flex-col md:flex-row md:space-x-2 items-end font-semibold">
                     <Link
                         href="/"
@@ -75,16 +80,9 @@ export default function Navbar() {
                     >
                         Blogs
                     </Link>
-                    {/* <Link
-                        href="/resume.pdf"
-                        target="_blank"
-                        className="hover:bg-gray-300 bg-gray-200 transition duration-150 px-4 py-2 rounded-full"
-                    >
-                        Resume
-                    </Link> */}
                     <VscColorMode
                         onClick={toggleTheme}
-                        className="text-3xl mb-1"
+                        className="text-3xl mb-1 cursor-pointer"
                     />
                 </div>
             </nav>
