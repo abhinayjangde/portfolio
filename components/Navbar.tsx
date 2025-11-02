@@ -1,4 +1,5 @@
 "use client";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -8,14 +9,19 @@ import { VscColorMode } from "react-icons/vsc";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const { setTheme } = useTheme();
 
     const toggleNavbar = () => {
         setIsOpen((prev) => !prev);
     };
 
+    const toggleTheme = () => {
+        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    };
+
     return (
-        <header className="sticky top-0 z-20 bg-white">
-            <nav className="mx-auto w-full flex items-center justify-between py-2 px-4">
+        <header className="sticky top-0 z-20 backdrop-blur-sm">
+            <nav className="flex items-center justify-between py-2 px-4">
                 <div className="">
                     <Link
                         href="/"
@@ -52,19 +58,20 @@ export default function Navbar() {
                 <div className="hidden md:flex flex-col md:flex-row md:space-x-2 items-end font-semibold">
                     <Link
                         href="/"
-                        className="hover:bg-gray-100 px-4 py-2 rounded-full"
+                        className="hover:bg-gray-100 px-4 py-2 rounded-full dark:hover:bg-gray-800"
                     >
                         Home
                     </Link>
                     <Link
                         href="/projects"
-                        className="hover:bg-gray-100 px-4 py-2 rounded-full"
+                        className="hover:bg-gray-100 px-4 py-2 rounded-full dark:hover:bg-gray-800"
                     >
                         Projects
                     </Link>
                     <Link
-                        href="/blogs"
-                        className="hover:bg-gray-100 px-4 py-2 rounded-full"
+                        href="https://codebhaiya.com/blogs"
+                        target="_blank"
+                        className="hover:bg-gray-100 px-4 py-2 rounded-full dark:hover:bg-gray-800"
                     >
                         Blogs
                     </Link>
@@ -75,7 +82,10 @@ export default function Navbar() {
                     >
                         Resume
                     </Link> */}
-                    <VscColorMode className="text-3xl mb-1" />
+                    <VscColorMode
+                        onClick={toggleTheme}
+                        className="text-3xl mb-1"
+                    />
                 </div>
             </nav>
 

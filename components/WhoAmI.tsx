@@ -1,8 +1,8 @@
 export default function WhoAmI() {
     return (
-        <section className="text-center py-12">
+        <section className="text-center py-12 bg-red-300">
             <div className="mb-8">
-                <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-300 to-neutral-900 bg-clip-text text-transparent mb-4">
+                <h1 className="text-5xl md:text-7xl font-bold bg-linear-to-r from-gray-300 to-neutral-900 bg-clip-text text-transparent mb-4">
                     Abhinay Jangde
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-600 font-light">

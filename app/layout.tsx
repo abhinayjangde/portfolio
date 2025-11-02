@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/providers/ThemeProdvier";
 
 export const metadata: Metadata = {
     title: "Abhinay Jangde",
@@ -14,11 +15,18 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <body className="container mx-auto">
-                <Navbar />
-                {children}
-                <Footer />
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </ThemeProvider>
             </body>
         </html>
     );
