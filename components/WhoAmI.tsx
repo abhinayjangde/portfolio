@@ -19,7 +19,7 @@ export default function WhoAmI() {
                     <h1 className="text-4xl font-bold my-4">
                         Hey, I&apos;m Abhinay Jangde
                     </h1>
-                    <p>
+                    <p className="font-semibold opacity-75">
                         Hi👋, I&apos;m a passionate Full Stack Developer who
                         thrives on the dynamic intersection of coding,
                         technology, and{" "}
@@ -30,7 +30,9 @@ export default function WhoAmI() {
                         professional environment.
                     </p>
                     <br />
-                    <p>In my free time I love watching movies.</p>
+                    <p className="font-semibold opacity-75">
+                        In my free time I love watching movies.
+                    </p>
                 </div>
                 <div className="flex md:flex-col gap-2 justify-between md:justify-center">
                     <Link
