@@ -9,3 +9,11 @@ upldate last commit msg
 ```cmd
 git commit --amend -m "portfolio project init"
 ```
+
+# Local Developmnet Setup
+
+1. Run
+
+```bash
+pnpm run dev
+```

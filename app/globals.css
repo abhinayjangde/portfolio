@@ -3,8 +3,70 @@
 
 @custom-variant dark (&:is(.dark *));
 
-html{
+/* Ultra-smooth dark mode transitions with GPU acceleration */
+html {
     overflow-x: none;
+}
+
+html,
+body {
+    transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: background-color, color;
+}
+
+/* Smooth transitions for all theme-aware elements */
+* {
+    transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-duration: 400ms;
+}
+
+/* Prevent animations on images and media for better performance */
+*:is(img, video, iframe, canvas) {
+    transition: none !important;
+}
+
+/* SVG elements get smoother transitions */
+svg,
+svg * {
+    transition: fill 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                stroke 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Special handling for backdrop-blur elements */
+.backdrop-blur-sm,
+.backdrop-blur {
+    transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                backdrop-filter 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Smooth shadow transitions */
+*[class*="shadow"] {
+    transition: box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Optimize for dark mode transitions */
+.dark {
+    transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.dark * {
+    transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-duration: 400ms;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 @theme inline {
@@ -120,5 +182,56 @@ html{
     }
   body {
     @apply bg-background text-foreground;
+    }
+}
+
+/* Custom smooth animations */
+@keyframes slide-in-from-top {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Custom utility classes for ultra-smooth transitions */
+.transition-smooth {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.transition-theme {
+    transition: background-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                border-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Enhance focus states with smooth transitions */
+*:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    transition: outline-offset 0.2s ease;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Override for anchor links */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
     }
 }
