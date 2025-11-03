@@ -1,7 +1,6 @@
 import Achievements from "@/components/Achievements";
 import RecentWorks from "@/components/RecentWorks";
 import Skills from "@/components/Skills";
-import Socials from "@/components/Socials";
 import WhoAmI from "@/components/WhoAmI";
 import imgCodebhaiya from "@/public/codebhaiya.png";
 import imgPeertodo from "@/public/peertodo.png";
@@ -45,7 +44,6 @@ export default function Home() {
         <main className="min-h-screen">
             <div className="px-4 py-8 space-y-16">
                 <WhoAmI />
-                <Socials />
                 <Skills />
                 <RecentWorks projects={recentProject} title={"recent works"} />
                 <Achievements />

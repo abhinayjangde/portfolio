@@ -1,45 +1,146 @@
-import { FaReact } from "react-icons/fa";
-import { RiNextjsFill } from "react-icons/ri";
+import React from "react";
+import {
+    FaReact,
+    FaPython,
+    FaNodeJs,
+    FaDocker,
+    FaAws,
+    FaDigitalOcean,
+} from "react-icons/fa";
+import { SiRedis } from "react-icons/si";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaPython } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
+import {
+    SiExpress,
+    SiMongodb,
+    SiPostgresql,
+    SiFastapi,
+    SiPostman,
+    SiHtml5,
+    SiCss3,
+} from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
-import { FaDocker } from "react-icons/fa";
-import { FaAws } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
-import { SiPostgresql } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { FaGitAlt } from "react-icons/fa";
-import { FaDigitalOcean } from "react-icons/fa";
 import { FcLinux } from "react-icons/fc";
-import { SiFastapi } from "react-icons/si";
-import { PiOpenAiLogo } from "react-icons/pi";
+import { DiGithubBadge } from "react-icons/di";
+interface Skill {
+    name: string;
+    icon: React.ReactElement;
+}
+
+const skills: Skill[] = [
+    {
+        name: "JavaScript (ES6+)",
+        icon: (
+            <IoLogoJavascript className="size-7 text-yellow-300 rounded-lg" />
+        ),
+    },
+    {
+        name: "TypeScript",
+        icon: <BiLogoTypescript className="size-7 text-blue-500 rounded-lg" />,
+    },
+    {
+        name: "MongoDB",
+        icon: <SiMongodb className="size-7 text-green-500 rounded-lg" />,
+    },
+    {
+        name: "HTML5/CSS3",
+        icon: <SiHtml5 className="size-7 text-yellow-500 rounded-lg" />,
+    },
+    {
+        name: "Postman",
+        icon: <SiPostman className="size-7 text-orange-500 rounded-lg" />,
+    },
+    {
+        name: "Tailwind CSS",
+        icon: <RiTailwindCssFill className="size-7 text-sky-500 rounded-lg" />,
+    },
+    {
+        name: "Docker",
+        icon: <FaDocker className="size-7 text-blue-500 rounded-lg" />,
+    },
+    {
+        name: "Bootstrap",
+        icon: <SiCss3 className="size-7 text-purple-500 rounded-lg" />,
+    },
+    {
+        name: "Git/GitHub",
+        icon: <DiGithubBadge className="size-7 text-gray-500 rounded-lg" />,
+    },
+    {
+        name: "React",
+        icon: <FaReact className="size-7 text-blue-500 rounded-lg" />,
+    },
+    {
+        name: "Next.js",
+        icon: (
+            <RiNextjsFill className="size-7 dark:text-white text-black rounded-lg" />
+        ),
+    },
+    {
+        name: "Node.js",
+        icon: <FaNodeJs className="size-7 text-green-500 rounded-lg" />,
+    },
+    {
+        name: "Express",
+        icon: <SiExpress className="size-7 text-gray-500 rounded-lg" />,
+    },
+    {
+        name: "PostgreSQL",
+        icon: <SiPostgresql className="size-7 text-blue-500 rounded-lg" />,
+    },
+    {
+        name: "AWS",
+        icon: <FaAws className="size-7 text-orange-500 rounded-lg" />,
+    },
+    {
+        name: "Digital Ocean",
+        icon: <FaDigitalOcean className="size-7 text-blue-500 rounded-lg" />,
+    },
+    {
+        name: "Python",
+        icon: <FaPython className="size-7 text-yellow-500 rounded-lg" />,
+    },
+    {
+        name: "FastAPI",
+        icon: <SiFastapi className="size-7 text-blue-500 rounded-lg" />,
+    },
+    {
+        name: "Linux",
+        icon: <FcLinux className="size-7 text-gray-500 rounded-lg" />,
+    },
+    {
+        name: "C/C++",
+        icon: <TbBrandCpp className="size-7 text-gray-500 rounded-lg" />,
+    },
+    {
+        name: "Redis",
+        icon: <SiRedis className="size-7 text-red-500 rounded-lg" />,
+    },
+];
 
 export default function Skills() {
     return (
-        <section className="py-8 border-b border-b-gray-300 pb-2">
-            <h2 className="text-3xl md:text-4xl my-4 md:border-none  border-b-1 border-b-gray-200">skills & technologies</h2>
-            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-8 justify-items-center">
-                <BiLogoTypescript className="w-12 h-12 hover:scale-125 transition-all duration-300 text-blue-500 drop-shadow-lg" />
-                <RiNextjsFill className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
-                <IoLogoJavascript className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#F0DB4F] drop-shadow-lg" />
-                <FaReact className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#61dbfb] drop-shadow-lg" />
-                <FaNodeJs className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#3C873A] drop-shadow-lg" />
-                <SiExpress className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
-                <FaDocker className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#1D63ED] drop-shadow-lg" />
-                <FaAws className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
-                <SiMongodb className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#00684A] drop-shadow-lg" />
-                <SiPostgresql className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#336791] drop-shadow-lg" />
-                <RiTailwindCssFill className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#1f2937] drop-shadow-lg" />
-                <FaGitAlt className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#f14e32] drop-shadow-lg" />
-                <FaDigitalOcean className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#008bcf] drop-shadow-lg" />
-                <FcLinux className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
-                <TbBrandCpp className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
-                <FaPython className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
-                <SiFastapi className="w-12 h-12 hover:scale-125 transition-all duration-300 text-[#0098FF] drop-shadow-lg" />
-                <PiOpenAiLogo className="w-12 h-12 hover:scale-125 transition-all duration-300 drop-shadow-lg" />
+        <section className="pb-2">
+            <h2 className="text-3xl md:text-4xl my-4 md:border-none border-b-gray-200">
+                skills and techstack
+            </h2>
+            <div className="flex flex-wrap gap-4 justify-start">
+                {skills.map((skill, index) => (
+                    <div
+                        key={index}
+                        className="flex items-center gap-3 from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 dark:bg-neutral-800 bg-neutral-100 p-1 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+                    >
+                        <div
+                            className={` p-2 rounded-md flex items-center justify-center text-white`}
+                        >
+                            {skill.icon}
+                        </div>
+                        <span className="text-sm md:text-base pr-4 font-medium text-gray-800 dark:text-gray-200">
+                            {skill.name}
+                        </span>
+                    </div>
+                ))}
             </div>
         </section>
     );

@@ -11,7 +11,7 @@ import { handles } from "@/helpers/handles";
 
 export default function Footer() {
     return (
-        <footer className="text-gray-800 mt-20 flex flex-col md:flex-row items-center justify-between p-6 border-t border-gray-300">
+        <footer className="text-gray-800 mt-20 flex gap-2 flex-col md:flex-row items-center justify-between p-6 border-t border-gray-300">
             <div className="">
                 <p className="text-gray-600">
                     © 2024 Abhinay Jangde | abhinayjangde.dev
