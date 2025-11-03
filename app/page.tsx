@@ -1,11 +1,11 @@
 import Achievements from "@/components/Achievements";
-import RecentWorks from "@/components/RecentWorks";
 import Skills from "@/components/Skills";
 import WhoAmI from "@/components/WhoAmI";
 import imgCodebhaiya from "@/public/codebhaiya.png";
 import imgPeertodo from "@/public/peertodo.png";
 import imgCapstone from "@/public/capstone.png";
 import { IProjects } from "./types/Projects";
+import FeaturedProjects from "@/components/FeaturedProjects";
 
 const recentProject: IProjects[] = [
     {
@@ -45,7 +45,10 @@ export default function Home() {
             <div className="px-4 py-8 space-y-16">
                 <WhoAmI />
                 <Skills />
-                <RecentWorks projects={recentProject} title={"recent works"} />
+                <FeaturedProjects
+                    projects={recentProject}
+                    title={"featured projects"}
+                />
                 <Achievements />
             </div>
         </main>

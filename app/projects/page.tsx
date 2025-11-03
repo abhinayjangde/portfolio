@@ -1,4 +1,4 @@
-import RecentWorks from "@/components/RecentWorks";
+import RecentWorks from "@/components/FeaturedProjects";
 import imgCodebhaiya from "@/public/codebhaiya.png";
 import imgPeertodo from "@/public/peertodo.png";
 import imgCapstone from "@/public/capstone.png";
