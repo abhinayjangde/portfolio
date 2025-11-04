@@ -44,8 +44,8 @@ export default function ProjectsWithFilter({
     }, [projects, searchQuery, selectedTech]);
 
     return (
-        <section className="pb-2 border-b border-b-gray-300">
-            <h2 className="text-3xl md:text-4xl my-4 md:border-none border-b-gray-200">
+        <section className="pb-2">
+            <h2 className="text-3xl md:text-4xl my-6 md:border-none border-b-gray-200">
                 {title}
             </h2>
 
@@ -58,7 +58,7 @@ export default function ProjectsWithFilter({
                         placeholder="Search projects..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full px-4 py-3 pl-10 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                        className="w-full px-4 py-3 pl-10 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-neutral-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                     />
                     <svg
                         className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
@@ -120,7 +120,7 @@ export default function ProjectsWithFilter({
                 ) : (
                     filteredProjects.map((project) => (
                         <div
-                            className="group relative bg-linear-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300"
+                            className="group relative rounded-sm overflow-hidden hover:shadow-xl transition-all duration-300 dark:bg-neutral-800 bg-gray-100"
                             key={project.id}
                         >
                             <div className="flex flex-col md:flex-row">
@@ -130,7 +130,7 @@ export default function ProjectsWithFilter({
                                         src={project.thumbnailUrl}
                                         alt={project.title}
                                         fill
-                                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                        className="object-cover m-4"
                                     />
                                     {project.isWorking && (
                                         <span className="absolute top-3 right-3 px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full shadow-lg">

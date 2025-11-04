@@ -8,6 +8,26 @@ import { IProjects } from "@/app/types/Projects";
 
 const projects: IProjects[] = [
     {
+        id: 5,
+        title: "AbhiGPT",
+        description:
+            "ChatGPT Clone with web search funtionality and it can remember context and implemented API rate limiting",
+        techstack: [
+            "Nodejs",
+            "NodeCache",
+            "Expressjs",
+            "GroqAPI",
+            "Tavily",
+            "Typescript",
+            "Tailwind",
+        ],
+        thumbnailUrl:
+            "https://drive.google.com/uc?id=1H3yEfRhlvOzT45pPtJxHSeT_mdwNxTpd",
+        githubUrl: "https://github.com/abhinayjangde/abhigpt",
+        liveLink: "https://chat.codebhaiya.com",
+        isWorking: false,
+    },
+    {
         id: 4,
         title: "CodeLayer",
         description: "Full Stack Leetcode Clone with AI Help Assistant",
@@ -15,7 +35,7 @@ const projects: IProjects[] = [
         thumbnailUrl: imgCodelayer,
         githubUrl: "https://github.com/abhinayjangde/codelayer",
         liveLink: "/",
-        isWorking: true,
+        isWorking: false,
     },
     {
         id: 1,
