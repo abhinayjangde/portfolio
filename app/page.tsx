@@ -13,7 +13,14 @@ const recentProject: IProjects[] = [
         title: "CodeBhaiya",
         description:
             "Full Stack Web App where user with creater role can write blogs",
-        techstack: ["Next.js", "Tailwind", "Mongodb", "OAuth"],
+        techstack: [
+            "Next.js",
+            "Typescript",
+            "Tailwind",
+            "Mongodb",
+            "OAuth",
+            "Aceternity UI",
+        ],
         thumbnailUrl: imgCodebhaiya,
         githubUrl: "https://github.com/abhinayjangde/codebhaiya",
         liveLink: "https://codebhaiya.com",

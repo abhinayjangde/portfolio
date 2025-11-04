@@ -1,4 +1,4 @@
-import RecentWorks from "@/components/FeaturedProjects";
+import ProjectsWithFilter from "@/components/ProjectsWithFilter";
 import imgCodebhaiya from "@/public/codebhaiya.png";
 import imgPeertodo from "@/public/peertodo.png";
 import imgCapstone from "@/public/capstone.png";
@@ -54,7 +54,7 @@ const projects: IProjects[] = [
 export default function Projects() {
     return (
         <div className="p-2">
-            <RecentWorks projects={projects} title="all projects" />
+            <ProjectsWithFilter projects={projects} title="all projects" />
         </div>
     );
 }

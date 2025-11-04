@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className="max-w-4xl mx-auto transition-colors duration-500 ease-out">
+            <body className="max-w-5xl mx-auto transition-colors duration-500 ease-out">
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
