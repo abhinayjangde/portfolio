@@ -29,7 +29,7 @@ export default function FeaturedProjects({
                                     src={project.thumbnailUrl}
                                     alt={project.title}
                                     fill
-                                    className="object-cover m-4"
+                                    className="object-cover md:m-4"
                                 />
                                 {project.isWorking && (
                                     <span className="absolute top-3 right-3 px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full shadow-lg">

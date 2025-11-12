@@ -69,6 +69,24 @@ const projects: IProjects[] = [
         liveLink: "/",
         isWorking: false,
     },
+    {
+        id: 6,
+        title: "URL Shortener",
+        description:
+            "This a fullstack URL shortener application built using Express, Typescript, Mongodb, and Docker. Used Redis for caching to improve performance.",
+        techstack: [
+            "Express",
+            "Typescript",
+            "Postman",
+            "Mongodb",
+            "Docker",
+            "Redis",
+        ],
+        thumbnailUrl: imgCapstone,
+        githubUrl: "https://github.com/abhinayjangde/url-shortener",
+        liveLink: "/",
+        isWorking: false,
+    },
 ];
 
 export default function Projects() {
