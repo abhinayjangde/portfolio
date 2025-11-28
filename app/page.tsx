@@ -56,6 +56,7 @@ export default function Home() {
                     projects={recentProject}
                     title={"featured projects"}
                 />
+
                 <Achievements />
             </div>
         </main>
