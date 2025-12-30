@@ -4,10 +4,20 @@ import WhoAmI from "@/components/WhoAmI";
 import imgCodebhaiya from "@/public/codebhaiya.png";
 import imgPeertodo from "@/public/peertodo.png";
 import imgCapstone from "@/public/capstone.png";
+import imgSpread from "@/public/spread.png";
 import { IProjects } from "./types/Projects";
 import FeaturedProjects from "@/components/FeaturedProjects";
 
 const recentProject: IProjects[] = [
+    {
+        id: 0,
+        title: "Spread",
+        description: "Spread - A Social Media Platform like Twitter",
+        techstack: ["Next.js", "Tailwind", "GraphQL", "OAuth", "Prisma", "PostgreSQL", "Apollo", "Nodejs"],
+        thumbnailUrl: imgSpread,
+        githubUrl: "https://github.com/abhinayjangde/spread",
+        liveLink: "https://spread.codebhaiya.com",
+    },
     {
         id: 1,
         title: "CodeBhaiya",

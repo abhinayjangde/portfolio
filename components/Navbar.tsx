@@ -77,7 +77,7 @@ export default function Navbar() {
                         Projects
                     </Link>
                     <Link
-                        href="https://codebhaiya.com/blogs"
+                        href="https://www.codebhaiya.com/blogs"
                         target="_blank"
                         className="hover:bg-gray-100 px-4 py-2 rounded-full dark:hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95"
                     >

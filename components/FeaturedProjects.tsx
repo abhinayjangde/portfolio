@@ -29,7 +29,7 @@ export default function FeaturedProjects({
                                     src={project.thumbnailUrl}
                                     alt={project.title}
                                     fill
-                                    className="object-cover md:m-4"
+                                    className="object-cover md:m-4 rounded-lg"
                                 />
                                 {project.isWorking && (
                                     <span className="absolute top-3 right-3 px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full shadow-lg">
@@ -68,14 +68,14 @@ export default function FeaturedProjects({
                                     <Link
                                         href={project.githubUrl}
                                         target="_blank"
-                                        className="bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
+                                        className="bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors duration-200"
                                     >
                                         Source Code
                                     </Link>
                                     <Link
                                         href={project.liveLink}
                                         target="_blank"
-                                        className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
+                                        className="bg-gray-300 hover:bg-gray-400 dark:bg-white dark:text-black dark:hover:bg-gray-100 text-black font-semibold px-6 py-2 rounded-full text-sm transition-colors duration-200"
                                     >
                                         Live Link
                                     </Link>
