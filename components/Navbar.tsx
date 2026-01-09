@@ -5,7 +5,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
-import { VscColorMode } from "react-icons/vsc";
+import { MdOutlineLightMode } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -42,12 +43,21 @@ export default function Navbar() {
 
                 {/* Conditional Rendering  */}
 
-                <div className="flex gap-2">
-                    <VscColorMode
-                        onClick={toggleTheme}
-                        className="text-3xl md:hidden cursor-pointer hover:scale-125 hover:rotate-180 transition-all duration-500 ease-out active:scale-95"
-                        aria-label="Toggle theme"
-                    />
+                <div className="flex justify-center items-center gap-2">
+                    {
+                        theme === "light" ? (<MdDarkMode
+
+                            onClick={toggleTheme}
+                            className="text-2xl md:hidden cursor-pointer"
+                            aria-label="Toggle theme"
+                        />) : (<MdOutlineLightMode
+
+                            onClick={toggleTheme}
+                            className="text-2xl md:hidden cursor-pointer"
+                            aria-label="Toggle theme"
+                        />)
+                    }
+
                     {isOpen ? (
                         <IoCloseSharp
                             onClick={toggleNavbar}
@@ -83,11 +93,21 @@ export default function Navbar() {
                     >
                         Blogs
                     </Link>
-                    <VscColorMode
-                        onClick={toggleTheme}
-                        className="text-3xl mb-1 cursor-pointer hover:scale-125 hover:rotate-180 transition-all duration-500 ease-out active:scale-95"
-                        aria-label="Toggle theme"
-                    />
+
+                    {
+                        theme === "light" ? (<MdDarkMode
+
+                            onClick={toggleTheme}
+                            className="text-2xl mb-[0.4rem] cursor-pointer transition-all duration-500 ease-out"
+                            aria-label="Toggle theme"
+                        />) : (<MdOutlineLightMode
+
+                            onClick={toggleTheme}
+                            className="text-2xl mb-[0.4rem] cursor-pointer transition-all duration-500 ease-out"
+                            aria-label="Toggle theme"
+                        />)
+                    }
+
                 </div>
             </nav>
 
