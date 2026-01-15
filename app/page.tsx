@@ -33,7 +33,7 @@ const recentProject: IProjects[] = [
         ],
         thumbnailUrl: imgCodebhaiya,
         githubUrl: "https://github.com/abhinayjangde/codebhaiya",
-        liveLink: "https://codebhaiya.com",
+        liveLink: "https://www.codebhaiya.com",
     },
     {
         id: 2,
