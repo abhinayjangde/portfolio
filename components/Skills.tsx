@@ -21,7 +21,7 @@ import {
     SiCss3,
 } from "react-icons/si";
 import { GrGraphQl } from "react-icons/gr";
-
+import { SiGithubactions, SiTrpc } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
 import { FcLinux } from "react-icons/fc";
 import { DiGithubBadge } from "react-icons/di";
@@ -119,10 +119,19 @@ const skills: Skill[] = [
     {
         name: "Redis",
         icon: <SiRedis className="size-7 text-red-500 rounded-lg" />,
-    }, {
+    },
+    {
         name: "GraphQL",
-        icon: <GrGraphQl className="size-7 text-pink-500 rounded-lg" />
-    }
+        icon: <GrGraphQl className="size-7 text-pink-500 rounded-lg" />,
+    },
+    {
+        name: "GitHub Actions",
+        icon: <SiGithubactions className="size-7 text-purple-500 rounded-lg" />,
+    },
+    {
+        name: "tRPC",
+        icon: <SiTrpc className="size-7 text-blue-500 rounded-lg" />,
+    },
 ];
 
 export default function Skills() {
