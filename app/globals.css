@@ -471,14 +471,22 @@ html {
         inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-/* Skills.sh style title - blocky, tall letters */
-.skills-title {
-    font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
-    font-weight: 900;
-    color: #ffffff;
-    letter-spacing: -0.03em;
-    line-height: 0.9;
-    text-shadow:
-        1px 1px 0 rgba(255, 255, 255, 0.1),
-        -1px -1px 0 rgba(0, 0, 0, 0.3);
+
+/* Marquee animation for tech stack icons */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+    animation-play-state: paused;
 }

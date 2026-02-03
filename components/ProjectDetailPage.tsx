@@ -63,7 +63,7 @@ export default function ProjectDetailPage({ project, githubStats }: ProjectDetai
                 {/* Back Link */}
                 <Link
                     href="/projects"
-                    className="inline-flex items-center gap-2 text-[#666] hover:text-white transition-colors mb-8 text-sm font-mono"
+                    className="inline-flex items-center gap-2 text-[#666] hover:text-black dark:hover:text-white transition-colors mb-8 text-sm font-mono"
                 >
                     <FiArrowLeft className="w-4 h-4" />
                     Back to projects
@@ -71,7 +71,7 @@ export default function ProjectDetailPage({ project, githubStats }: ProjectDetai
 
                 {/* Header - Project Name */}
                 <header className="mb-8">
-                    <h1 className="text-4xl md:text-5xl font-black text-white mb-2 font-mono">
+                    <h1 className="text-4xl md:text-5xl font-black text-black dark:text-white mb-2 font-mono">
                         {project.slug}
                     </h1>
                     <p className="text-[#666] text-sm font-mono">
