@@ -126,7 +126,7 @@ export default function ProjectsSkillPage({
                             PROJECTS
                         </h1>
                         <p className="text-[11px] tracking-[0.25em] text-[#666] uppercase font-medium mb-10">
-                            The Open Source Portfolio Ecosystem
+                            My All Projects
                         </p>
 
                         {/* Install Command Section */}
@@ -165,10 +165,10 @@ export default function ProjectsSkillPage({
                             Projects are reusable applications for developers. Explore them with a single command to enhance your learning with access to production-grade code.
                         </p>
 
-                        {/* Available for these agents */}
-                        <div>
+                        {/* Tech Stack and Tools */}
+                        <div className="mt-4">
                             <p className="text-[11px] tracking-[0.2em] text-[#666] uppercase font-medium mb-4">
-                                Available for these Agents
+                                Tech Stack and Tools
                             </p>
                             <div className="flex items-center gap-8">
                                 {agentIcons.map(({ icon: Icon, name }) => (
@@ -271,9 +271,7 @@ export default function ProjectsSkillPage({
                             filteredProjects.map((project, index) => (
                                 <Link
                                     key={project.id}
-                                    href={project.githubUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    href={`/projects/${project.slug}`}
                                     className="grid grid-cols-12 gap-4 py-4 items-center border-b border-[#111] hover:bg-[#0a0a0a] transition-colors group"
                                 >
                                     {/* Rank */}

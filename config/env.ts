@@ -1,3 +1,6 @@
-const env = {};
+const _env = {
+    githubToken: process.env.NEXT_PUBLIC_GITHUB_TOKEN, 
+    
+};
 
-export default Object.freeze(env);
+export const env = Object.freeze(_env);
