@@ -11,7 +11,7 @@ html {
 html,
 body {
     transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     will-change: background-color, color;
 }
 
@@ -31,20 +31,20 @@ body {
 svg,
 svg * {
     transition: fill 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                stroke 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        stroke 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Special handling for backdrop-blur elements */
 .backdrop-blur-sm,
 .backdrop-blur {
     transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                backdrop-filter 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        backdrop-filter 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Smooth shadow transitions */
 *[class*="shadow"] {
     transition: box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Optimize for dark mode transitions */
@@ -60,6 +60,7 @@ svg * {
 
 /* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -177,11 +178,12 @@ svg * {
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+
+    body {
+        @apply bg-background text-foreground;
     }
 }
 
@@ -191,6 +193,7 @@ svg * {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -201,6 +204,7 @@ svg * {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -213,8 +217,8 @@ svg * {
 
 .transition-theme {
     transition: background-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                border-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Enhance focus states with smooth transitions */
@@ -234,4 +238,247 @@ html {
     html {
         scroll-behavior: smooth;
     }
+}
+
+/* ============================================
+   Project Cards - Enhanced Visual Effects
+   ============================================ */
+
+/* Gradient border effect using pseudo-element */
+.card-gradient-border {
+    position: relative;
+    background: var(--card);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card-gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg,
+            oklch(0.7 0.15 264) 0%,
+            oklch(0.5 0.2 300) 50%,
+            oklch(0.6 0.18 220) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-gradient-border:hover::before {
+    opacity: 1;
+}
+
+/* Glassmorphism effect */
+.glass-effect {
+    background: oklch(1 0 0 / 8%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-effect {
+    background: oklch(0 0 0 / 20%);
+}
+
+/* Image overlay gradient */
+.image-overlay {
+    position: relative;
+}
+
+.image-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            oklch(0 0 0 / 60%) 0%,
+            oklch(0 0 0 / 0%) 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-overlay:hover::after {
+    opacity: 1;
+}
+
+/* Staggered card animation */
+@keyframes card-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate-card-reveal {
+    animation: card-reveal 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    opacity: 0;
+}
+
+/* Filter pill gradient active state */
+.filter-pill-active {
+    background: linear-gradient(135deg,
+            oklch(0.55 0.2 264) 0%,
+            oklch(0.45 0.22 280) 100%);
+    color: white;
+    box-shadow: 0 4px 15px oklch(0.5 0.2 264 / 30%);
+}
+
+/* Search input enhanced focus */
+.search-input-enhanced {
+    border: 1px solid oklch(0.9 0.01 264);
+    background: oklch(1 0 0 / 80%);
+    backdrop-filter: blur(8px);
+}
+
+.dark .search-input-enhanced {
+    border: 1px solid oklch(0.3 0.04 264);
+    background: oklch(0.15 0.02 264 / 80%);
+}
+
+.search-input-enhanced:focus {
+    border-color: oklch(0.6 0.15 264);
+    box-shadow: 0 0 0 3px oklch(0.6 0.15 264 / 20%);
+}
+
+/* Tech badge with subtle gradient */
+.tech-badge {
+    background: linear-gradient(135deg,
+            oklch(0.95 0.02 264) 0%,
+            oklch(0.92 0.04 280) 100%);
+    color: oklch(0.4 0.15 264);
+    border: 1px solid oklch(0.85 0.05 264 / 50%);
+}
+
+.dark .tech-badge {
+    background: linear-gradient(135deg,
+            oklch(0.25 0.05 264) 0%,
+            oklch(0.22 0.06 280) 100%);
+    color: oklch(0.8 0.1 264);
+    border: 1px solid oklch(0.4 0.1 264 / 30%);
+}
+
+/* Button enhancements */
+.btn-primary-gradient {
+    background: linear-gradient(135deg,
+            oklch(0.3 0.04 264) 0%,
+            oklch(0.2 0.05 280) 100%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px oklch(0.2 0.05 264 / 40%);
+}
+
+.dark .btn-primary-gradient {
+    background: linear-gradient(135deg,
+            oklch(0.35 0.06 264) 0%,
+            oklch(0.28 0.08 280) 100%);
+}
+
+.btn-secondary-glow {
+    background: oklch(0.96 0.01 264);
+    border: 1px solid oklch(0.9 0.02 264);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-secondary-glow:hover {
+    background: oklch(1 0 0);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px oklch(0.5 0.1 264 / 20%);
+}
+
+.dark .btn-secondary-glow {
+    background: oklch(0.95 0.01 264);
+    color: oklch(0.15 0.04 264);
+    border: none;
+}
+
+.dark .btn-secondary-glow:hover {
+    background: oklch(1 0 0);
+}
+
+/* Empty state illustration */
+.empty-state-icon {
+    background: linear-gradient(135deg,
+            oklch(0.95 0.02 264) 0%,
+            oklch(0.9 0.04 280) 100%);
+}
+
+.dark .empty-state-icon {
+    background: linear-gradient(135deg,
+            oklch(0.25 0.04 264) 0%,
+            oklch(0.2 0.06 280) 100%);
+}
+
+/* ============================================
+   Projects Skill Page - Terminal Aesthetic
+   ============================================ */
+
+/* Pixel-art text styling */
+.pixel-text {
+    font-family: 'Courier New', 'SF Mono', 'Monaco', 'Consolas', monospace;
+    letter-spacing: -0.02em;
+    background: linear-gradient(180deg,
+            #ffffff 0%,
+            #ffffff 45%,
+            #888888 50%,
+            #ffffff 55%,
+            #ffffff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow:
+        0 0 40px rgba(255, 255, 255, 0.1),
+        0 0 80px rgba(255, 255, 255, 0.05);
+}
+
+/* Alternative blocky pixel look */
+.pixel-text-alt {
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    image-rendering: pixelated;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: none;
+}
+
+/* Scanline effect for extra retro feel */
+.scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 1px,
+            rgba(0, 0, 0, 0.1) 1px,
+            rgba(0, 0, 0, 0.1) 2px);
+    pointer-events: none;
+}
+
+/* Terminal glow effect */
+.terminal-glow {
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        0 0 20px rgba(0, 255, 100, 0.03),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Skills.sh style title - blocky, tall letters */
+.skills-title {
+    font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -0.03em;
+    line-height: 0.9;
+    text-shadow:
+        1px 1px 0 rgba(255, 255, 255, 0.1),
+        -1px -1px 0 rgba(0, 0, 0, 0.3);
 }

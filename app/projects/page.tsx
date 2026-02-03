@@ -1,24 +1,52 @@
-import ProjectsWithFilter from "@/components/ProjectsWithFilter";
+import ProjectsSkillPage from "@/components/ProjectsSkillPage";
 import imgCodebhaiya from "@/public/codebhaiya.png";
 import imgPeertodo from "@/public/peertodo.png";
 import imgCapstone from "@/public/capstone.png";
 import imgCodelayer from "@/public/codelayer.png";
+import imgSpread from "@/public/spread.png";
 
 import { IProjects } from "@/app/types/Projects";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Projects | Abhinay Jangde",
+    description:
+        "Explore my portfolio of full-stack applications, AI-powered tools, and open-source projects built with Next.js, Node.js, and more.",
+};
 
 const projects: IProjects[] = [
+    {
+        id: 7,
+        title: "Spread",
+        description:
+            "A social media platform like Twitter with real-time updates, GraphQL API, and OAuth authentication",
+        techstack: [
+            "Next.js",
+            "Tailwind",
+            "GraphQL",
+            "OAuth",
+            "Prisma",
+            "PostgreSQL",
+            "Apollo",
+            "Node.js",
+        ],
+        thumbnailUrl: imgSpread,
+        githubUrl: "https://github.com/abhinayjangde/spread",
+        liveLink: "https://spread.codebhaiya.com",
+        isWorking: true,
+    },
     {
         id: 5,
         title: "AbhiGPT",
         description:
-            "ChatGPT Clone with web search funtionality and it can remember context and implemented API rate limiting",
+            "ChatGPT clone with web search functionality, context memory, and API rate limiting",
         techstack: [
-            "Nodejs",
+            "Node.js",
             "NodeCache",
-            "Expressjs",
-            "GroqAPI",
+            "Express.js",
+            "Groq API",
             "Tavily",
-            "Typescript",
+            "TypeScript",
             "Tailwind",
         ],
         thumbnailUrl:
@@ -30,8 +58,9 @@ const projects: IProjects[] = [
     {
         id: 4,
         title: "CodeLayer",
-        description: "Full Stack Leetcode Clone with AI Help Assistant",
-        techstack: ["Next.js", "PrismaORM", "PostgreSQL", "Judge0", "Docker"],
+        description:
+            "Full-stack LeetCode clone with AI help assistant and code execution",
+        techstack: ["Next.js", "Prisma", "PostgreSQL", "Judge0", "Docker"],
         thumbnailUrl: imgCodelayer,
         githubUrl: "https://github.com/abhinayjangde/codelayer",
         liveLink: "/",
@@ -41,18 +70,19 @@ const projects: IProjects[] = [
         id: 1,
         title: "CodeBhaiya",
         description:
-            "Full Stack Web App where user with creater role can write blogs",
-        techstack: ["Next.js", "Tailwind", "Mongodb", "OAuth"],
+            "Full-stack web app where users with creator role can write and publish blogs",
+        techstack: ["Next.js", "Tailwind", "MongoDB", "OAuth"],
         thumbnailUrl: imgCodebhaiya,
         githubUrl: "https://github.com/abhinayjangde/codebhaiya",
         liveLink: "https://codebhaiya.com",
-        isWorking: false,
+        isWorking: true,
     },
     {
         id: 2,
         title: "PeerTodo",
-        description: "Organize Your Life with Smart Todos - FullStack Todo App",
-        techstack: ["Nodejs", "Express", "Tailwind", "Mongodb"],
+        description:
+            "Organize your life with smart todos — a full-stack todo application",
+        techstack: ["Node.js", "Express", "Tailwind", "MongoDB"],
         thumbnailUrl: imgPeertodo,
         githubUrl: "https://github.com/abhinayjangde/peer-todo",
         liveLink: "https://todo.codebhaiya.com",
@@ -62,8 +92,8 @@ const projects: IProjects[] = [
         id: 3,
         title: "Crastone",
         description:
-            "This AI resume roast - complete backend build with FastAPI and OpenAI API",
-        techstack: ["FastAPI", "Mongodb", "Docker", "Valkey"],
+            "AI resume roast — backend built with FastAPI and OpenAI API with Redis caching",
+        techstack: ["FastAPI", "MongoDB", "Docker", "Valkey"],
         thumbnailUrl: imgCapstone,
         githubUrl: "https://github.com/abhinayjangde/crastone",
         liveLink: "/",
@@ -73,12 +103,11 @@ const projects: IProjects[] = [
         id: 6,
         title: "URL Shortener",
         description:
-            "This a fullstack URL shortener application built using Express, Typescript, Mongodb, and Docker. Used Redis for caching to improve performance.",
+            "Full-stack URL shortener with Redis caching for improved performance",
         techstack: [
             "Express",
-            "Typescript",
-            "Postman",
-            "Mongodb",
+            "TypeScript",
+            "MongoDB",
             "Docker",
             "Redis",
         ],
@@ -91,8 +120,9 @@ const projects: IProjects[] = [
 
 export default function Projects() {
     return (
-        <div className="p-2">
-            <ProjectsWithFilter projects={projects} title="all projects" />
-        </div>
+        <main className="min-h-screen">
+            <ProjectsSkillPage projects={projects} />
+        </main>
     );
 }
+
