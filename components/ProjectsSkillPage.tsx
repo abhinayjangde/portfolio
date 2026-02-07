@@ -170,7 +170,7 @@ export default function ProjectsSkillPage({
                                 Find Me
                             </p>
                             <div className="dark:bg-[#0d0d0d] bg-[#f1f1f1] dark:border-[#1a1a1a] rounded-md flex items-center justify-between px-4 py-3 group hover:border-[#2a2a2a] transition-colors">
-                                <code className="text-[13px] font-mono text-[#888]">
+                                <code className="text-[13px]  text-[#888]">
                                     <span className="text-[#555]">$ </span>
                                     <span className="dark:text-[#ccc] text-black">curl</span>{" "}
                                     <span className="dark:text-[#ccc] text-black">https://abhinayjangde.dev</span>{" "}
@@ -296,9 +296,9 @@ export default function ProjectsSkillPage({
                             placeholder="Search projects..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full bg-transparent border-b border-[#1a1a1a] py-3 pl-7 pr-10 text-[14px] text-[#ccc] placeholder-[#444] focus:outline-none focus:border-[#333] transition-colors font-mono"
+                            className="w-full bg-transparent border-b border-[#1a1a1a] py-3 pl-7 pr-10 text-[14px] text-[#ccc] placeholder-[#444] focus:outline-none focus:border-[#333] transition-colors"
                         />
-                        <span className="absolute right-0 top-1/2 -translate-y-1/2 text-[#333] text-sm font-mono">
+                        <span className="absolute right-0 top-1/2 -translate-y-1/2 text-[#333] text-sm ">
                             /
                         </span>
                     </div>
@@ -307,10 +307,10 @@ export default function ProjectsSkillPage({
                     <div className="flex items-center gap-6 mb-8">
                         <button
                             onClick={() => setActiveFilter("all")}
-                            className={`text-[13px] font-mono transition-colors pb-1 ${
+                            className={`text-[13px] text-black transition-colors pb-1 ${
                                 activeFilter === "all"
-                                    ? "text-white border-b border-white"
-                                    : "text-[#555] hover:text-[#888]"
+                                    ? "dark:text-white border-b border-white"
+                                    : "dark:text-[#555] hover:text-[#888]"
                             }`}
                         >
                             All Time{" "}
@@ -318,7 +318,7 @@ export default function ProjectsSkillPage({
                         </button>
                         <button
                             onClick={() => setActiveFilter("recent")}
-                            className={`text-[13px] font-mono transition-colors pb-1 ${
+                            className={`text-[13px]  transition-colors pb-1 ${
                                 activeFilter === "recent"
                                     ? "text-white border-b border-white"
                                     : "text-[#555] hover:text-[#888]"
@@ -328,7 +328,7 @@ export default function ProjectsSkillPage({
                         </button>
                         <button
                             onClick={() => setActiveFilter("featured")}
-                            className={`text-[13px] font-mono transition-colors pb-1 ${
+                            className={`text-[13px]  transition-colors pb-1 ${
                                 activeFilter === "featured"
                                     ? "text-white border-b border-white"
                                     : "text-[#555] hover:text-[#888]"
@@ -339,16 +339,16 @@ export default function ProjectsSkillPage({
                     </div>
 
                     {/* Table Header */}
-                    <div className="grid grid-cols-12 gap-4 text-[11px] text-[#444] uppercase tracking-wider py-3 border-b border-[#1a1a1a] font-mono">
+                    <div className="grid grid-cols-12 gap-4 text-[11px] text-[#444] uppercase tracking-wider py-3 border-b border-[#1a1a1a] ">
                         <div className="col-span-1">#</div>
                         <div className="col-span-8">Project</div>
-                        <div className="col-span-3 text-right">Installs</div>
+                        <div className="col-span-3 text-right">Other</div>
                     </div>
 
                     {/* Project Rows */}
                     <div>
                         {filteredProjects.length === 0 ? (
-                            <div className="py-16 text-center text-[#444] font-mono text-sm">
+                            <div className="py-16 text-center text-black dark:text-white  text-sm">
                                 No projects found matching your search.
                             </div>
                         ) : (
@@ -356,32 +356,32 @@ export default function ProjectsSkillPage({
                                 <Link
                                     key={project.id}
                                     href={`/projects/${project.slug}`}
-                                    className="grid grid-cols-12 gap-4 py-4 items-center border-b border-[#111] hover:bg-[#0a0a0a] transition-colors group"
+                                    className="grid grid-cols-12 gap-4 py-4 items-center border-b border-[#111] dark:hover:bg-[#0a0a0a] transition-colors group"
                                 >
                                     {/* Rank */}
-                                    <div className="col-span-1 text-[#444] text-sm font-mono tabular-nums">
+                                    <div className="col-span-1 text-[#444] text-sm  tabular-nums">
                                         {index + 1}
                                     </div>
 
                                     {/* Project Info */}
                                     <div className="col-span-8">
                                         <div className="flex items-center gap-3">
-                                            <span className="text-white font-semibold text-[15px] group-hover:underline">
+                                            <span className="dark:text-white text-black font-semibold text-[15px] group-hover:underline">
                                                 {project.title.toLowerCase().replace(/\s+/g, "-")}
                                             </span>
                                             {project.isWorking && (
                                                 <span className="text-green-500 text-xs">●</span>
                                             )}
                                         </div>
-                                        <p className="text-[#555] text-[13px] font-mono mt-0.5">
+                                        <p className="text-[#555] text-[13px]  mt-0.5">
                                             abhinayjangde/{project.title.toLowerCase().replace(/\s+/g, "-")}
                                         </p>
                                     </div>
 
                                     {/* Installs/Stars */}
                                     <div className="col-span-3 text-right">
-                                        <span className="text-[#666] text-[14px] font-mono tabular-nums">
-                                            {getStarCount(project.id)}K
+                                        <span className="text-[#666] text-[14px]  tabular-nums">
+                                            live
                                         </span>
                                     </div>
                                 </Link>
