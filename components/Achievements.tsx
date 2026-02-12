@@ -14,8 +14,6 @@ export default function Achievements() {
             </p>
             <section className="">
                 <div className="mt-6 text-center bg-gray-50 dark:bg-neutral-900 rounded-lg">
-                    {/* 
-                    */}
 
                     <Image src={"/yt.png"} alt="" width={1300} height={386} className="rounded-lg" />
                     <h3 className="text-xl mt-4 font-bold mb-2 text-gray-800 dark:text-gray-100">

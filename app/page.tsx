@@ -14,7 +14,16 @@ const recentProject: IProjects[] = [
         slug: "spread",
         title: "Spread",
         description: "Spread - A Social Media Platform like Twitter",
-        techstack: ["Next.js", "Tailwind", "GraphQL", "OAuth", "Prisma", "PostgreSQL", "Apollo", "Nodejs"],
+        techstack: [
+            "Next.js",
+            "Tailwind",
+            "GraphQL",
+            "OAuth",
+            "Prisma",
+            "PostgreSQL",
+            "Apollo",
+            "Nodejs",
+        ],
         thumbnailUrl: imgSpread,
         githubUrl: "https://github.com/abhinayjangde/spread",
         githubRepo: "abhinayjangde/spread",
@@ -60,7 +69,7 @@ const recentProject: IProjects[] = [
         thumbnailUrl: imgCapstone,
         githubUrl: "https://github.com/abhinayjangde/crastone",
         githubRepo: "abhinayjangde/crastone",
-        liveLink: "/",
+        liveLink: "https://crastone.vercel.app",
     },
 ];
 
