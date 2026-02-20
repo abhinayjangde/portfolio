@@ -296,7 +296,7 @@ export default function ProjectsSkillPage({
                             placeholder="Search projects..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full bg-transparent border-b border-[#1a1a1a] py-3 pl-7 pr-10 text-[14px] text-[#ccc] placeholder-[#444] focus:outline-none focus:border-[#333] transition-colors"
+                            className="w-full bg-transparent border-b border-[#1a1a1a] py-3 pl-7 pr-10 text-[14px] text-[#ccc] placeholder-[#444] focus:outline-none focus-visible:outline-none transition-colors"
                         />
                         <span className="absolute right-0 top-1/2 -translate-y-1/2 text-[#333] text-sm ">
                             /
@@ -339,52 +339,98 @@ export default function ProjectsSkillPage({
                     </div>
 
                     {/* Table Header */}
-                    <div className="grid grid-cols-12 gap-4 text-[11px] text-[#444] uppercase tracking-wider py-3 border-b border-[#1a1a1a] ">
-                        <div className="col-span-1">#</div>
-                        <div className="col-span-8">Project</div>
-                        <div className="col-span-3 text-right">Other</div>
+                    <div className="grid grid-cols-12 gap-4 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider py-4 border-b border-gray-200 dark:border-[#1a1a1a]">
+                        <div className="col-span-1 text-center">#</div>
+                        <div className="col-span-7 md:col-span-5">Project</div>
+                        <div className="col-span-4 md:col-span-4 hidden md:block">Stack</div>
+                        <div className="col-span-4 md:col-span-2 text-right">Links</div>
                     </div>
 
                     {/* Project Rows */}
-                    <div>
+                    <div className="flex flex-col gap-1 mt-2">
                         {filteredProjects.length === 0 ? (
-                            <div className="py-16 text-center text-black dark:text-white  text-sm">
-                                No projects found matching your search.
+                            <div className="py-20 flex flex-col items-center justify-center text-center bg-gray-50 dark:bg-[#0a0a0a] rounded-2xl border border-dashed border-gray-200 dark:border-[#222]">
+                                <div className="text-4xl mb-4 opacity-50">🔍</div>
+                                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">No projects found</h3>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">Try adjusting your search criteria.</p>
                             </div>
                         ) : (
                             filteredProjects.map((project, index) => (
-                                <Link
+                                <div
                                     key={project.id}
-                                    href={`/projects/${project.slug}`}
-                                    className="grid grid-cols-12 gap-4 py-4 items-center border-b border-[#111] dark:hover:bg-[#0a0a0a] transition-colors group"
+                                    className="grid grid-cols-12 gap-4 py-4 md:py-5 items-center border border-transparent hover:border-gray-100 dark:hover:border-[#222] hover:bg-white dark:hover:bg-[#0d0d0d] hover:shadow-sm transition-all duration-300 group rounded-2xl px-3 -mx-3"
                                 >
                                     {/* Rank */}
-                                    <div className="col-span-1 text-[#444] text-sm  tabular-nums">
-                                        {index + 1}
+                                    <div className="col-span-1 text-gray-400 dark:text-[#555] text-sm font-medium text-center tabular-nums group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                        {String(index + 1).padStart(2, '0')}
                                     </div>
 
                                     {/* Project Info */}
-                                    <div className="col-span-8">
-                                        <div className="flex items-center gap-3">
-                                            <span className="dark:text-white text-black font-semibold text-[15px] group-hover:underline">
-                                                {project.title.toLowerCase().replace(/\s+/g, "-")}
-                                            </span>
-                                            {project.isWorking && (
-                                                <span className="text-green-500 text-xs">●</span>
-                                            )}
-                                        </div>
-                                        <p className="text-[#555] text-[13px]  mt-0.5">
-                                            abhinayjangde/{project.title.toLowerCase().replace(/\s+/g, "-")}
-                                        </p>
+                                    <div className="col-span-7 md:col-span-5">
+                                        <Link href={`/projects/${project.slug}`} className="block">
+                                            <div className="flex items-center gap-3 mb-1.5">
+                                                <span className="text-gray-900 dark:text-white font-bold text-[15px] sm:text-base group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                                    {project.title}
+                                                </span>
+                                                {project.isWorking && (
+                                                    <span className="relative flex h-2 w-2" title="Live and Working">
+                                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <p className="text-gray-500 dark:text-[#777] text-xs sm:text-sm line-clamp-1 group-hover:text-gray-700 dark:group-hover:text-[#999] transition-colors">
+                                                {project.description}
+                                            </p>
+                                        </Link>
                                     </div>
 
-                                    {/* Installs/Stars */}
-                                    <div className="col-span-3 text-right">
-                                        <span className="text-[#666] text-[14px]  tabular-nums">
-                                            live
-                                        </span>
+                                    {/* Tech Stack */}
+                                    <div className="col-span-4 hidden md:flex items-center gap-2 flex-wrap">
+                                        {project.techstack.slice(0, 3).map((tech, i) => {
+                                            const Icon = techIcons[tech];
+                                            return Icon ? (
+                                                <div key={i} className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-gray-50 dark:bg-[#111] border border-gray-100 dark:border-[#222] text-gray-700 dark:text-gray-300 text-[11px] font-semibold tracking-wide">
+                                                    <Icon className="w-3.5 h-3.5" />
+                                                    <span>{tech}</span>
+                                                </div>
+                                            ) : (
+                                                <span key={i} className="px-2.5 py-1.5 rounded-lg bg-gray-50 dark:bg-[#111] border border-gray-100 dark:border-[#222] text-gray-700 dark:text-gray-300 text-[11px] font-semibold tracking-wide">
+                                                    {tech}
+                                                </span>
+                                            );
+                                        })}
+                                        {project.techstack.length > 3 && (
+                                            <span className="text-[11px] font-medium text-gray-400 dark:text-[#555] ml-1">
+                                                +{project.techstack.length - 3}
+                                            </span>
+                                        )}
                                     </div>
-                                </Link>
+
+                                    {/* Actions/Links */}
+                                    <div className="col-span-4 md:col-span-2 flex items-center justify-end gap-1.5 sm:gap-3">
+                                        <Link
+                                            href={project.githubUrl}
+                                            target="_blank"
+                                            className="p-2.5 text-gray-400 hover:text-gray-900 dark:text-[#666] dark:hover:text-white hover:bg-gray-100 dark:hover:bg-[#1a1a1a] rounded-xl transition-all"
+                                            title="View Source Code"
+                                        >
+                                            <DiGithubBadge className="w-[1.125rem] h-[1.125rem]" />
+                                        </Link>
+                                        {project.liveLink && project.liveLink !== "/" && (
+                                            <Link
+                                                href={project.liveLink}
+                                                target="_blank"
+                                                className="p-2.5 text-gray-400 hover:text-blue-600 dark:text-[#666] dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-500/10 rounded-xl transition-all"
+                                                title="Visit Live Site"
+                                            >
+                                                <svg className="w-[1.125rem] h-[1.125rem]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                                </svg>
+                                            </Link>
+                                        )}
+                                    </div>
+                                </div>
                             ))
                         )}
                     </div>
