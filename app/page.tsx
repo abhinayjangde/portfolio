@@ -2,11 +2,13 @@ import Achievements from "@/components/Achievements";
 import Skills from "@/components/Skills";
 import WhoAmI from "@/components/WhoAmI";
 import imgCodebhaiya from "@/public/codebhaiya.png";
-import imgPeertodo from "@/public/peertodo.png";
+import imgPeertodo from "@/public/peertodo.png"; // Placeholder for AbhiGPT
 import imgCapstone from "@/public/capstone.png";
 import imgSpread from "@/public/spread.png";
 import { IProjects } from "./types/Projects";
 import FeaturedProjects from "@/components/FeaturedProjects";
+import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 
 const recentProject: IProjects[] = [
     {
@@ -18,11 +20,10 @@ const recentProject: IProjects[] = [
             "Next.js",
             "Tailwind",
             "GraphQL",
-            "OAuth",
             "Prisma",
             "PostgreSQL",
-            "Apollo",
-            "Nodejs",
+            "AWS S3",
+            "Supabase",
         ],
         thumbnailUrl: imgSpread,
         githubUrl: "https://github.com/abhinayjangde/spread",
@@ -37,11 +38,11 @@ const recentProject: IProjects[] = [
             "Full Stack Web App where user with creater role can write blogs",
         techstack: [
             "Next.js",
-            "Typescript",
+            "TypeScript",
             "Tailwind",
-            "Mongodb",
-            "OAuth",
-            "Aceternity UI",
+            "PostgreSQL",
+            "Redux",
+            "Digital Ocean",
         ],
         thumbnailUrl: imgCodebhaiya,
         githubUrl: "https://github.com/abhinayjangde/codebhaiya",
@@ -50,22 +51,22 @@ const recentProject: IProjects[] = [
     },
     {
         id: 2,
-        slug: "peertodo",
-        title: "PeerTodo",
-        description: "Organize Your Life with Smart Todos - FullStack Todo App",
-        techstack: ["Nodejs", "Express", "Tailwind", "Mongodb"],
-        thumbnailUrl: imgPeertodo,
-        githubUrl: "https://github.com/abhinayjangde/peer-todo",
-        githubRepo: "abhinayjangde/peer-todo",
-        liveLink: "https://todo.codebhaiya.com",
+        slug: "abhigpt",
+        title: "AbhiGPT",
+        description: "Agentic AI chat application with tool-calling for live web search and both a browser UI and CLI interface.",
+        techstack: ["Node.js", "Groq LLMs", "Tavily API", "Agentic AI"],
+        thumbnailUrl: imgPeertodo, 
+        githubUrl: "https://github.com/abhinayjangde/abhigpt",
+        githubRepo: "abhinayjangde/abhigpt",
+        liveLink: "https://github.com/abhinayjangde/abhigpt", 
     },
     {
         id: 3,
         slug: "crastone",
-        title: "Crastone",
+        title: "Crastone (AI Resume Generator)",
         description:
-            "This AI resume roast - complete backend build with FastAPI and OpenAI API",
-        techstack: ["FastAPI", "Mongodb", "Docker", "Valkey"],
+            "LLM-powered AI Resume Generator built with FastAPI, OpenAI API, and Redis.",
+        techstack: ["FastAPI", "OpenAI API", "Redis", "MongoDB", "Docker"],
         thumbnailUrl: imgCapstone,
         githubUrl: "https://github.com/abhinayjangde/crastone",
         githubRepo: "abhinayjangde/crastone",
@@ -78,6 +79,7 @@ export default function Home() {
         <main className="min-h-screen">
             <div className="px-4 py-8 space-y-16">
                 <WhoAmI />
+                <Experience />
                 <Skills />
                 <FeaturedProjects
                     projects={recentProject}
@@ -85,6 +87,7 @@ export default function Home() {
                 />
 
                 <Achievements />
+                <Education />
             </div>
         </main>
     );

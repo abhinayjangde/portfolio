@@ -25,6 +25,8 @@ import { SiGithubactions, SiTrpc } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
 import { FcLinux } from "react-icons/fc";
 import { DiGithubBadge } from "react-icons/di";
+import { FaRobot, FaBrain, FaDatabase } from "react-icons/fa";
+import { SiOpenai } from "react-icons/si";
 
 interface Skill {
     name: string;
@@ -131,6 +133,22 @@ const skills: Skill[] = [
     {
         name: "tRPC",
         icon: <SiTrpc className="size-7 text-blue-500 rounded-lg" />,
+    },
+    {
+        name: "GenAI & LLMs",
+        icon: <FaBrain className="size-7 text-pink-500 rounded-lg" />,
+    },
+    {
+        name: "LangChain & RAG",
+        icon: <FaRobot className="size-7 text-indigo-500 rounded-lg" />,
+    },
+    {
+        name: "OpenAI API",
+        icon: <SiOpenai className="size-7 dark:text-white text-black rounded-lg" />,
+    },
+    {
+        name: "Vector DBs",
+        icon: <FaDatabase className="size-7 text-blue-400 rounded-lg" />,
     },
 ];
 
