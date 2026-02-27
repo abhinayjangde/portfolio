@@ -12,14 +12,12 @@ export default function Experience() {
             
             <div className="flex flex-col gap-6 relative">
                 {/* Timeline line */}
-                <div className="absolute left-6 md:left-[3.5rem] top-8 bottom-8 w-px bg-gray-200 dark:bg-gray-800 -z-10 hidden sm:block"></div>
+                <div className="absolute left-6 md:left-14 top-8 bottom-8 w-px bg-gray-200 dark:bg-gray-800 -z-10 hidden sm:block"></div>
 
                 {/* Experience 1 */}
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 group">
-                    <div className="flex-none hidden sm:flex items-center justify-center w-14 h-14 rounded-full bg-white dark:bg-neutral-900 border-4 border-gray-50 dark:border-neutral-950 shadow-sm z-10 select-none group-hover:scale-110 group-hover:border-blue-100 dark:group-hover:border-blue-900/30 transition-all duration-300">
-                        <FaBriefcase className="text-blue-600 dark:text-blue-400 text-xl" />
-                    </div>
-                    <div className="flex-1 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-gray-800 p-6 md:p-8 rounded-2xl group-hover:shadow-lg dark:group-hover:border-gray-700 transition-all duration-300">
+                    
+                    <div className="flex-1 bg-gray-200 dark:bg-neutral-900 border border-gray-200 dark:border-gray-800 p-6 md:p-8 rounded-2xl group-hover:shadow-lg dark:group-hover:border-gray-700 transition-all duration-300">
                         <div className="flex flex-col md:flex-row justify-between mb-2 md:items-center">
                             <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">
                                 Full Stack Engineer
@@ -40,10 +38,8 @@ export default function Experience() {
 
                 {/* Experience 2 */}
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 group">
-                    <div className="flex-none hidden sm:flex items-center justify-center w-14 h-14 rounded-full bg-white dark:bg-neutral-900 border-4 border-gray-50 dark:border-neutral-950 shadow-sm z-10 select-none group-hover:scale-110 group-hover:border-red-100 dark:group-hover:border-red-900/30 transition-all duration-300">
-                        <FaYoutube className="text-red-500 text-xl" />
-                    </div>
-                    <div className="flex-1 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-gray-800 p-6 md:p-8 rounded-2xl group-hover:shadow-lg dark:group-hover:border-gray-700 transition-all duration-300">
+                    
+                    <div className="flex-1 bg-gray-200 dark:bg-neutral-900 border border-gray-200 dark:border-gray-800 p-6 md:p-8 rounded-2xl group-hover:shadow-lg dark:group-hover:border-gray-700 transition-all duration-300">
                         <div className="flex flex-col md:flex-row justify-between mb-2 md:items-center">
                             <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">
                                 Content Creator &ndash; Coding Education
@@ -65,10 +61,8 @@ export default function Experience() {
 
                 {/* Experience 3 */}
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 group">
-                    <div className="flex-none hidden sm:flex items-center justify-center w-14 h-14 rounded-full bg-white dark:bg-neutral-900 border-4 border-gray-50 dark:border-neutral-950 shadow-sm z-10 select-none group-hover:scale-110 group-hover:border-green-100 dark:group-hover:border-green-900/30 transition-all duration-300">
-                        <FaNetworkWired className="text-green-600 dark:text-green-500 text-xl" />
-                    </div>
-                    <div className="flex-1 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-gray-800 p-6 md:p-8 rounded-2xl group-hover:shadow-lg dark:group-hover:border-gray-700 transition-all duration-300">
+                    
+                    <div className="flex-1 bg-gray-200 dark:bg-neutral-900 border border-gray-200 dark:border-gray-800 p-6 md:p-8 rounded-2xl group-hover:shadow-lg dark:group-hover:border-gray-700 transition-all duration-300">
                         <div className="flex flex-col md:flex-row justify-between mb-2 md:items-center">
                             <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">
                                 Networking Intern
