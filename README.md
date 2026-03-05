@@ -17,3 +17,6 @@ git commit --amend -m "portfolio project init"
 ```bash
 pnpm run dev
 ```
+
+docker compose up --build
+docker run -p 3000:3000 --name portfolio --env-file .env -d portfolio:latest
