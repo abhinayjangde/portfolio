@@ -7,7 +7,6 @@ import {
     FaAws,
     FaDigitalOcean,
 } from "react-icons/fa";
-import { SiRedis } from "react-icons/si";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
@@ -20,15 +19,21 @@ import {
     SiHtml5,
     SiCss3,
 } from "react-icons/si";
-import { SiApachekafka } from "react-icons/si";
-import { SiShadcnui } from "react-icons/si";
+import { TbPrompt } from "react-icons/tb";
+import { SiSocketdotio } from "react-icons/si";
+import {
+    SiApachekafka,
+    SiN8N,
+    SiShadcnui,
+    SiRedis,
+    SiOpenai,
+} from "react-icons/si";
 import { GrGraphQl } from "react-icons/gr";
 import { SiGithubactions, SiTrpc } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
 import { FcLinux } from "react-icons/fc";
 import { DiGithubBadge } from "react-icons/di";
 import { FaRobot, FaBrain, FaDatabase } from "react-icons/fa";
-import { SiOpenai } from "react-icons/si";
 
 interface Skill {
     name: string;
@@ -52,7 +57,9 @@ const skillCategories: SkillCategory[] = [
             },
             {
                 name: "TypeScript",
-                icon: <BiLogoTypescript className="size-6 text-blue-500 rounded-lg" />,
+                icon: (
+                    <BiLogoTypescript className="size-6 text-blue-500 rounded-lg" />
+                ),
             },
             {
                 name: "React",
@@ -66,7 +73,9 @@ const skillCategories: SkillCategory[] = [
             },
             {
                 name: "Tailwind CSS",
-                icon: <RiTailwindCssFill className="size-6 text-sky-500 rounded-lg" />,
+                icon: (
+                    <RiTailwindCssFill className="size-6 text-sky-500 rounded-lg" />
+                ),
             },
             {
                 name: "HTML5/CSS3",
@@ -77,9 +86,11 @@ const skillCategories: SkillCategory[] = [
                 icon: <SiCss3 className="size-6 text-purple-500 rounded-lg" />,
             },
             {
-                name:"ShadcnUI",
-                icon: <SiShadcnui className="size-6 text-black dark:text-white rounded-lg" />,
-            }
+                name: "ShadcnUI",
+                icon: (
+                    <SiShadcnui className="size-6 text-black dark:text-white rounded-lg" />
+                ),
+            },
         ],
     },
     {
@@ -95,7 +106,9 @@ const skillCategories: SkillCategory[] = [
             },
             {
                 name: "Python",
-                icon: <FaPython className="size-6 text-yellow-500 rounded-lg" />,
+                icon: (
+                    <FaPython className="size-6 text-yellow-500 rounded-lg" />
+                ),
             },
             {
                 name: "FastAPI",
@@ -103,7 +116,9 @@ const skillCategories: SkillCategory[] = [
             },
             {
                 name: "C/C++",
-                icon: <TbBrandCpp className="size-6 text-blue-500 rounded-lg" />,
+                icon: (
+                    <TbBrandCpp className="size-6 text-blue-500 rounded-lg" />
+                ),
             },
             {
                 name: "GraphQL",
@@ -115,11 +130,15 @@ const skillCategories: SkillCategory[] = [
             },
             {
                 name: "PostgreSQL",
-                icon: <SiPostgresql className="size-6 text-blue-500 rounded-lg" />,
+                icon: (
+                    <SiPostgresql className="size-6 text-blue-500 rounded-lg" />
+                ),
             },
             {
                 name: "MongoDB",
-                icon: <SiMongodb className="size-6 text-green-500 rounded-lg" />,
+                icon: (
+                    <SiMongodb className="size-6 text-green-500 rounded-lg" />
+                ),
             },
             {
                 name: "Redis",
@@ -127,8 +146,16 @@ const skillCategories: SkillCategory[] = [
             },
             {
                 name: "Apache Kafka",
-                icon: <SiApachekafka className="size-6 text-red-500 rounded-lg" />,
-            }
+                icon: (
+                    <SiApachekafka className="size-6 text-red-500 rounded-lg" />
+                ),
+            },
+            {
+                name: "Socket.IO",
+                icon: (
+                    <SiSocketdotio className="size-6 text-gray-800 dark:text-white rounded-lg" />
+                ),
+            },
         ],
     },
     {
@@ -144,11 +171,25 @@ const skillCategories: SkillCategory[] = [
             },
             {
                 name: "OpenAI API",
-                icon: <SiOpenai className="size-6 dark:text-white text-black rounded-lg" />,
+                icon: (
+                    <SiOpenai className="size-6 dark:text-white text-black rounded-lg" />
+                ),
             },
             {
                 name: "Vector DBs",
-                icon: <FaDatabase className="size-6 text-blue-400 rounded-lg" />,
+                icon: (
+                    <FaDatabase className="size-6 text-blue-400 rounded-lg" />
+                ),
+            },
+            {
+                name: "n8n",
+                icon: <SiN8N className="size-6 text-pink-500 rounded-lg" />,
+            },
+            {
+                name: "Prompt Engineering",
+                icon: (
+                    <TbPrompt className="size-6 text-yellow-500 rounded-lg" />
+                ),
             },
         ],
     },
@@ -165,7 +206,9 @@ const skillCategories: SkillCategory[] = [
             },
             {
                 name: "Digital Ocean",
-                icon: <FaDigitalOcean className="size-6 text-blue-500 rounded-lg" />,
+                icon: (
+                    <FaDigitalOcean className="size-6 text-blue-500 rounded-lg" />
+                ),
             },
             {
                 name: "Linux",
@@ -173,15 +216,21 @@ const skillCategories: SkillCategory[] = [
             },
             {
                 name: "Git/GitHub",
-                icon: <DiGithubBadge className="size-6 text-gray-800 dark:text-white rounded-lg" />,
+                icon: (
+                    <DiGithubBadge className="size-6 text-gray-800 dark:text-white rounded-lg" />
+                ),
             },
             {
                 name: "GitHub Actions",
-                icon: <SiGithubactions className="size-6 text-purple-500 rounded-lg" />,
+                icon: (
+                    <SiGithubactions className="size-6 text-purple-500 rounded-lg" />
+                ),
             },
             {
                 name: "Postman",
-                icon: <SiPostman className="size-6 text-orange-500 rounded-lg" />,
+                icon: (
+                    <SiPostman className="size-6 text-orange-500 rounded-lg" />
+                ),
             },
         ],
     },
@@ -195,7 +244,10 @@ export default function Skills() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {skillCategories.map((category, catIndex) => (
-                    <div key={catIndex} className="bg-white dark:bg-neutral-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        key={catIndex}
+                        className="bg-white dark:bg-neutral-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                    >
                         <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200 border-b border-gray-100 dark:border-gray-800 pb-2">
                             {category.title}
                         </h3>
