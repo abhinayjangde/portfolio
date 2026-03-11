@@ -2,7 +2,7 @@ import Achievements from "@/components/Achievements";
 import Skills from "@/components/Skills";
 import WhoAmI from "@/components/WhoAmI";
 import imgCodebhaiya from "@/public/codebhaiya.png";
-import imgPeertodo from "@/public/peertodo.png"; // Placeholder for AbhiGPT
+import imgCodebhaiyaAI from "@/public/img/codebhaiyaai.png"; // Placeholder for AbhiGPT
 import imgCapstone from "@/public/capstone.png";
 import imgSpread from "@/public/spread.png";
 import { IProjects } from "./types/Projects";
@@ -12,6 +12,17 @@ import Education from "@/components/Education";
 
 const recentProject: IProjects[] = [
     {
+        id: 2,
+        slug: "codebhaiyaai",
+        title: "CodeBhaiyaAI",
+        description: "Agentic AI chat application with tool-calling for live web search.",
+        techstack: ["Node.js", "Nextjs", "MongoDB", "Tavily API", "Agentic AI"],
+        thumbnailUrl: imgCodebhaiyaAI, 
+        githubUrl: "https://github.com/abhinayjangde/chat.codebhaiya",
+        githubRepo: "abhinayjangde/chat.codebhaiya  ",
+        liveLink: "https://chat.codebhaiya.com", 
+    },
+    {   
         id: 0,
         slug: "spread",
         title: "Spread",
@@ -49,17 +60,7 @@ const recentProject: IProjects[] = [
         githubRepo: "abhinayjangde/codebhaiya",
         liveLink: "https://www.codebhaiya.com",
     },
-    {
-        id: 2,
-        slug: "abhigpt",
-        title: "AbhiGPT",
-        description: "Agentic AI chat application with tool-calling for live web search and both a browser UI and CLI interface.",
-        techstack: ["Node.js", "Groq LLMs", "Tavily API", "Agentic AI"],
-        thumbnailUrl: imgPeertodo, 
-        githubUrl: "https://github.com/abhinayjangde/abhigpt",
-        githubRepo: "abhinayjangde/abhigpt",
-        liveLink: "https://github.com/abhinayjangde/abhigpt", 
-    },
+    
     {
         id: 3,
         slug: "crastone",

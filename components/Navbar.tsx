@@ -93,6 +93,17 @@ export default function Navbar() {
                     >
                         Blogs
                     </Link>
+                    <Link
+                        href="https://chat.codebhaiya.com"
+                        target="_blank"
+                        className="flex items-center gap-1.5 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white px-4 py-1.5 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg hover:shadow-violet-500/25 text-sm"
+                    >
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+                        </span>
+                        CodeBhaiya AI
+                    </Link>
 
                     {
                         theme === "light" ? (<MdDarkMode
@@ -134,6 +145,18 @@ export default function Navbar() {
                         onClick={toggleNavbar}
                     >
                         Blogs
+                    </Link>
+                    <Link
+                        href="https://chat.codebhaiya.com"
+                        target="_blank"
+                        className="w-full flex items-center justify-end gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-4 py-3 rounded-lg transition-all duration-300 hover:-translate-x-1 active:scale-95"
+                        onClick={toggleNavbar}
+                    >
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+                        </span>
+                        CodeBhaiya AI — Live
                     </Link>
                 </div>
             )}
