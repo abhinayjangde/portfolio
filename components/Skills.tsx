@@ -6,7 +6,9 @@ import {
     FaDocker,
     FaAws,
     FaDigitalOcean,
+    FaRobot, FaBrain, FaDatabase
 } from "react-icons/fa";
+import { FaGolang } from "react-icons/fa6";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
@@ -33,7 +35,6 @@ import { SiGithubactions, SiTrpc } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
 import { FcLinux } from "react-icons/fc";
 import { DiGithubBadge } from "react-icons/di";
-import { FaRobot, FaBrain, FaDatabase } from "react-icons/fa";
 
 interface Skill {
     name: string;
@@ -108,6 +109,12 @@ const skillCategories: SkillCategory[] = [
                 name: "Python",
                 icon: (
                     <FaPython className="size-6 text-yellow-500 rounded-lg" />
+                ),
+            },
+            {
+                name: "Go Lang",
+                icon: (
+                    <FaGolang className="size-6 text-blue-500 rounded-lg" />
                 ),
             },
             {
