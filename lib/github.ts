@@ -1,4 +1,4 @@
-import { GitHubStats } from "@/app/types/Projects";
+import { GitHubStats } from "@/types/Projects";
 import { env } from "@/config/env";
 
 const GITHUB_API_BASE = "https://api.github.com";

@@ -1,6 +1,6 @@
 "use client";
 
-import { IProjects, GitHubStats } from "@/app/types/Projects";
+import { IProjects, GitHubStats } from "@/types/Projects";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";

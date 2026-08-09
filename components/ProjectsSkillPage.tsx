@@ -1,6 +1,6 @@
 "use client";
 
-import { IProjects } from "@/app/types/Projects";
+import { IProjects } from "@/types/Projects";
 import Link from "next/link";
 import { useState, useMemo, useEffect } from "react";
 import dynamic from "next/dynamic";

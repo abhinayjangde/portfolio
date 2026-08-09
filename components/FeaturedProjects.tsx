@@ -1,4 +1,4 @@
-import { IProjects } from "@/app/types/Projects";
+import { IProjects } from "@/types/Projects";
 import Image from "next/image";
 import Link from "next/link";
 

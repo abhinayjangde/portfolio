@@ -5,7 +5,7 @@ import imgCodebhaiya from "@/public/codebhaiya.png";
 import imgCodebhaiyaAI from "@/public/img/codebhaiyaai.png"; // Placeholder for AbhiGPT
 import imgCapstone from "@/public/capstone.png";
 import imgSpread from "@/public/spread.png";
-import { IProjects } from "./types/Projects";
+import { IProjects } from "../types/Projects";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";

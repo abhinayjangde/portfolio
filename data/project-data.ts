@@ -4,7 +4,7 @@ import imgCapstone from "@/public/capstone.png";
 import imgCodelayer from "@/public/codelayer.png";
 import imgSpread from "@/public/spread.png";
 
-import { IProjects } from "@/app/types/Projects";
+import { IProjects } from "@/types/Projects";
 
 
 export const projects: IProjects[] = [
