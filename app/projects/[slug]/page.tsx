@@ -1,4 +1,4 @@
-import { projects } from "../page";
+import { projects } from "@/data/project-data";
 import { getRepoStats } from "@/lib/github";
 import ProjectDetailPage from "@/components/ProjectDetailPage";
 import { notFound } from "next/navigation";
