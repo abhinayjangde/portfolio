@@ -31,7 +31,7 @@ export const activeProjects: IProjects[] = [
       "/chocotimes.jpg",
     githubUrl: "https://github.com/abhinayjangde/chocotimes",
     githubRepo: "abhinayjangde/chocotimes",
-    liveLink: "/",
+    liveLink: "https://choco.abhinayjangde.dev",
     isWorking: true,
   },
 ];
