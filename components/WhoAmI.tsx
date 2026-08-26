@@ -17,7 +17,7 @@ export default function WhoAmI() {
                 />
                 <div className="max-w-lg">
                     <h1 className="text-4xl font-bold my-4">
-                        Hey, I&apos;m Abhinay Jangde
+                        Hey, I&apos;m Akhil
                     </h1>
                     <p className="font-semibold opacity-75">
                         Hi👋, I&apos;m a passionate Full Stack Developer who
