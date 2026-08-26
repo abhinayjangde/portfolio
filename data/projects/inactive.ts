@@ -97,7 +97,7 @@ export const inactiveProjects: IProjects[] = [
         thumbnailUrl: "/codebhaiya.png",
         githubUrl: "https://github.com/abhinayjangde/codebhaiya",
         githubRepo: "abhinayjangde/codebhaiya",
-        liveLink: "https://codebhaiya.com",
+        liveLink: "https://www.codebhaiya.com",
         isWorking: false,
     },
     {
