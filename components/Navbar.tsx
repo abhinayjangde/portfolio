@@ -36,7 +36,7 @@ export default function Navbar() {
                             className="w-10 rounded-full group-hover:scale-110 transition-transform duration-300"
                         />
                         <h4 className="text-xl font-semibold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                            Abhinay Jangde
+                            abhinayjangde.dev
                         </h4>
                     </Link>
                 </div>
