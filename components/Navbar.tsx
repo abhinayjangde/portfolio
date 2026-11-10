@@ -113,14 +113,14 @@ export default function Navbar() {
                         <Link
                             href="https://chat.codebhaiya.com"
                             target="_blank"
-                            className="w-full flex items-center justify-end gap-2 bg-(--accent-peach) px-4 py-3 text-(--text-ink) transition-all duration-300"
+                            className="w-fit rounded-full flex items-center justify-end gap-2 bg-black px-4 py-3 text-white transition-all duration-300"
                             onClick={toggleNavbar}
                         >
                             <span className="relative flex h-2 w-2">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
                             </span>
-                            CodeBhaiya AI — Live
+                            CodeBhaiya AI
                         </Link>
                     </div>
                 )}
