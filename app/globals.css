@@ -721,6 +721,23 @@ p {
     color: #1e3a5f;
 }
 
+.theme-toggle-anchor {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 50;
+    width: 3rem;
+    height: 3rem;
+}
+
+.theme-toggle-button {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
 .project-card,
 .card-gradient-border,
 .glass-effect {

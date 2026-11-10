@@ -14,7 +14,7 @@ export default function Footer() {
         <footer className="text-gray-800 dark:text-gray-200 mt-2 flex gap-2 flex-col md:flex-row items-center justify-between py-8 border-t border-[var(--border)] transition-all duration-500">
             <div className="">
                 <p className="text-gray-600 dark:text-gray-400 transition-colors duration-500">
-                    © {new Date().getFullYear()} Abhinay Jangde. All rights reserved.
+                    © {new Date().getFullYear()} Abhinay Jangde
                 </p>
             </div>
 
