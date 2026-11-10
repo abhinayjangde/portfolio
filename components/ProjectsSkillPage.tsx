@@ -415,7 +415,7 @@ export default function ProjectsSkillPage({
                                             className="p-2.5 text-gray-400 hover:text-gray-900 dark:text-[#666] dark:hover:text-white hover:bg-gray-100 dark:hover:bg-[#1a1a1a] rounded-xl transition-all"
                                             title="View Source Code"
                                         >
-                                            <DiGithubBadge className="w-[1.125rem] h-[1.125rem]" />
+                                            <DiGithubBadge className="w-4.5 h-4.5" />
                                         </Link>
                                         {project.liveLink && project.liveLink !== "/" && (
                                             <Link
@@ -424,7 +424,7 @@ export default function ProjectsSkillPage({
                                                 className="p-2.5 text-gray-400 hover:text-blue-600 dark:text-[#666] dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-500/10 rounded-xl transition-all"
                                                 title="Visit Live Site"
                                             >
-                                                <svg className="w-[1.125rem] h-[1.125rem]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                                 </svg>
                                             </Link>

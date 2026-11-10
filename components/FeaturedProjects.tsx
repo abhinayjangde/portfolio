@@ -19,7 +19,7 @@ export default function FeaturedProjects({
             <div className="space-y-6">
                 {projects.map((project) => (
                     <div
-                        className="project-card group relative border border-[var(--border)] bg-[var(--card)] overflow-hidden hover:border-[var(--primary)] transition-all duration-300"
+                        className="project-card group relative border border-border bg-card overflow-hidden hover:border-primary transition-all duration-300"
                         key={project.id}
                     >
                         <div className="flex flex-col md:flex-row">
@@ -44,7 +44,7 @@ export default function FeaturedProjects({
                                     <h3 className="text-xl font-bold">
                                         {project.title}
                                     </h3>
-                                    <p className="text-sm text-[var(--muted-foreground)] leading-relaxed">
+                                    <p className="text-sm text-muted-foreground leading-relaxed">
                                         {project.description}
                                     </p>
 
@@ -54,7 +54,7 @@ export default function FeaturedProjects({
                                             (tech, index) => (
                                                 <span
                                                     key={index}
-                                                    className="border border-[var(--border)] text-[var(--muted-foreground)] rounded-full px-2 py-1 text-xs font-medium"
+                                                    className="border border-border text-muted-foreground rounded-full px-2 py-1 text-xs font-medium"
                                                 >
                                                     {tech}
                                                 </span>
@@ -68,14 +68,14 @@ export default function FeaturedProjects({
                                     <Link
                                         href={project.githubUrl}
                                         target="_blank"
-                                        className="bg-[var(--primary)] hover:brightness-110 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors duration-200"
+                                        className="bg-primary hover:brightness-110 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors duration-200"
                                     >
                                         Source Code
                                     </Link>
                                     <Link
                                         href={project.liveLink}
                                         target="_blank"
-                                        className="border border-[var(--border)] hover:border-[var(--primary)] font-semibold px-6 py-2 rounded-full text-sm transition-colors duration-200"
+                                        className="border border-border hover:border-primary font-semibold px-6 py-2 rounded-full text-sm transition-colors duration-200"
                                     >
                                         Live Link
                                     </Link>

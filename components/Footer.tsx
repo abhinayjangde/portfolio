@@ -11,7 +11,7 @@ import { handles } from "@/helpers/handles";
 
 export default function Footer() {
     return (
-        <footer className="text-gray-800 dark:text-gray-200 mt-2 flex gap-2 flex-col md:flex-row items-center justify-between py-8 border-t border-[var(--border)] transition-all duration-500">
+        <footer className="text-gray-800 dark:text-gray-200 mt-2 flex gap-2 flex-col md:flex-row items-center justify-between py-8 transition-all duration-500">
             <div className="">
                 <p className="text-gray-600 dark:text-gray-400 transition-colors duration-500">
                     © {new Date().getFullYear()} Abhinay Jangde
