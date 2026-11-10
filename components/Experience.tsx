@@ -5,7 +5,7 @@ export default function Experience() {
     return (
         <section className="my-10">
             <div className="flex items-center gap-3 mb-6 pb-4">
-                <h2 className="text-3xl md:text-4xl text-gray-900 dark:text-gray-100">
+                <h2 className="section-rule editorial-heading text-3xl md:text-5xl text-gray-900 dark:text-gray-100">
                     experience
                 </h2>
             </div>

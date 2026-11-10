@@ -6,7 +6,7 @@ export default function Achievements() {
         <section className="my-10">
             <div className="flex items-center gap-3 mb-6 border-b border-gray-200 dark:border-gray-800 pb-4">
                 
-                <h2 className="text-3xl md:text-4xl">
+                <h2 className="section-rule editorial-heading text-3xl md:text-5xl">
                     achievements
                 </h2>
             </div>

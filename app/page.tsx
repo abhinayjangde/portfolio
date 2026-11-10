@@ -78,7 +78,7 @@ const recentProject: IProjects[] = [
 export default function Home() {
     return (
         <main className="min-h-screen">
-            <div className="px-4 py-8 space-y-16">
+            <div className="px-0 py-8 space-y-20 md:py-12">
                 <WhoAmI />
                 <Experience />
                 <Skills />

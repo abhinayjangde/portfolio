@@ -246,14 +246,14 @@ const skillCategories: SkillCategory[] = [
 export default function Skills() {
     return (
         <section className="py-6">
-            <h2 className="text-3xl md:text-4xl my-6 md:border-none border-b-gray-200">
+            <h2 className="section-rule editorial-heading text-3xl md:text-5xl my-6">
                 skills and tech stack
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {skillCategories.map((category, catIndex) => (
                     <div
                         key={catIndex}
-                        className="bg-white dark:bg-neutral-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                        className="bg-[var(--card)] border border-[var(--border)] p-6 hover:border-[var(--primary)] transition-colors"
                     >
                         <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200 border-b border-gray-100 dark:border-gray-800 pb-2">
                             {category.title}

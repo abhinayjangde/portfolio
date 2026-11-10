@@ -7,36 +7,48 @@ import Image from "next/image";
 export default function WhoAmI() {
     return (
         <section className="md:py-12">
-            <div className="flex gap-4 md:flex-row flex-col items-center">
-                <Image
-                    src="https://drive.google.com/uc?id=1q_bkFfhsgK_izp-8J1ANlBsI1CsGyDXl"
-                    alt="Profile Picture"
-                    className="rounded-full size-40 md:mt-4"
-                    width={100}
-                    height={100}
-                />
+            <div className="hero-grid">
+                <div className="avatar-wrap">
+                    <Image
+                        src="https://avatars.githubusercontent.com/u/64852930?v=4"
+                        alt="Profile Picture"
+                        className="hero-avatar"
+                        width={400}
+                        height={400}
+                    />
+                </div>
                 <div className="max-w-lg">
-                    <h1 className="text-4xl font-bold my-4">
-                        Hey, I&apos;m Abhinay Jangde
+                    <p className="kicker mb-5">
+                        Software Engineer
+                    </p>
+                    <h1 className="editorial-heading text-4xl md:text-4xl font-bold my-4">
+                        Hey, I&apos;m <span className="marker-word">Abhinay</span> Jangde
                     </h1>
-                    <p className="font-semibold opacity-75">
+                    <p className="hero-lead">
                         Hi👋, I&apos;m a passionate Full Stack Developer who
                         thrives on the dynamic intersection of coding,
                         technology, and{" "}
-                        <span className="text-blue-800 underline dark:text-yellow-400">
+                        <span className="marker-underline">
                             education
                         </span>
                         . Eager to learn and adapt to new technologies in a
                         professional environment.
                     </p>
-                    <br />
-                    <p className="font-semibold opacity-75">
+                    <p className="text-muted-foreground hero-lead mt-4">
                         In my free time I love watching movies.
                     </p>
+                    <div className="hero-actions">
+                        <Link className="pill-button button-primary" href={handles.github} target="_blank">
+                            Explore my work
+                        </Link>
+                        <Link className="pill-button button-secondary" href="/resume.pdf" target="_blank">
+                            Download resume
+                        </Link>
+                    </div>
                 </div>
-                <div className="flex md:flex-col gap-2 justify-between md:justify-center">
+                <div className="hero-links">
                     <Link
-                        className="border px-3 py-2"
+                        className="hero-icon-link hover:bg-black hover:text-white"
                         href={handles.github}
                         target="_blank"
                     >
@@ -44,7 +56,7 @@ export default function WhoAmI() {
                         Github
                     </Link>
                     <Link
-                        className="border px-3 py-2"
+                        className="hero-icon-link hover:bg-black hover:text-white"
                         href={handles.linkedin}
                         target="_blank"
                     >
@@ -52,7 +64,7 @@ export default function WhoAmI() {
                         LinkedIn
                     </Link>
                     <Link
-                        className="border px-3 py-2"
+                        className="hero-icon-link hover:bg-black hover:text-white"
                         href="/resume.pdf"
                         target="_blank"
                     >

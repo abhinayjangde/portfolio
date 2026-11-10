@@ -21,22 +21,15 @@ export default function Navbar() {
     };
 
     return (
-        <header className="sticky top-0 z-20 backdrop-blur-sm transition-all duration-500 ease-out">
-            <nav className="flex items-center justify-between py-2 px-4">
+        <header className="sticky top-0 z-20 border-b border-[var(--border-subtle)] bg-transparent backdrop-blur-sm transition-all duration-500 ease-out">
+            <nav className="flex min-h-20 items-center justify-between gap-6 py-4">
                 <div className="">
                     <Link
                         href="/"
                         className="flex justify-center items-center space-x-2 group"
                     >
-                        <Image
-                            src="https://avatars.githubusercontent.com/u/64852930?v=4"
-                            alt="avatar"
-                            width={100}
-                            height={100}
-                            className="w-10 rounded-full group-hover:scale-110 transition-transform duration-300"
-                        />
-                        <h4 className="text-xl font-semibold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                            abhinayjangde.dev
+                        <h4 className="text-lg font-semibold tracking-tight text-[var(--text-ink)] group-hover:text-[var(--accent-navy)] transition-colors duration-300">
+                            Abhinay Jangde
                         </h4>
                     </Link>
                 </div>
@@ -73,30 +66,30 @@ export default function Navbar() {
                     )}
                 </div>
 
-                <div className="hidden md:flex flex-col md:flex-row md:space-x-2 items-end font-semibold">
+                <div className="hidden md:flex flex-wrap items-center justify-end gap-1 font-semibold text-[var(--text-ink)]">
                     <Link
                         href="/"
-                        className="hover:bg-gray-100 px-4 py-2 rounded-full dark:hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95"
+                        className="rounded-full px-4 py-2 hover:bg-[#eef0f7] hover:text-[var(--accent-navy)] transition-all duration-300"
                     >
                         Home
                     </Link>
                     <Link
                         href="/projects"
-                        className="hover:bg-gray-100 px-4 py-2 rounded-full dark:hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95"
+                        className="rounded-full px-4 py-2 hover:bg-[#eef0f7] hover:text-[var(--accent-navy)] transition-all duration-300"
                     >
                         Projects
                     </Link>
                     <Link
                         href="https://www.codebhaiya.com/blogs"
                         target="_blank"
-                        className="hover:bg-gray-100 px-4 py-2 rounded-full dark:hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95"
+                        className="rounded-full px-4 py-2 hover:bg-[#eef0f7] hover:text-[var(--accent-navy)] transition-all duration-300"
                     >
                         Blogs
                     </Link>
                     <Link
                         href="https://chat.codebhaiya.com"
                         target="_blank"
-                        className="flex items-center gap-1.5 bg-linear-to-r from-black to-slate-600 hover:from-black hover:to-slate-500 text-white px-4 py-1.5 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg hover:shadow-violet-500/25 text-sm"
+                        className="flex items-center gap-1.5 rounded-full bg-black px-4 py-2 text-sm text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
                     >
                         <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -109,7 +102,7 @@ export default function Navbar() {
                         theme === "light" ? (<MdDarkMode
 
                             onClick={toggleTheme}
-                            className="text-2xl mb-[0.4rem] cursor-pointer transition-all duration-500 ease-out"
+                            className="text-2xl cursor-pointer text-[var(--accent-navy)] transition-all duration-500 ease-out"
                             aria-label="Toggle theme"
                         />) : (<MdOutlineLightMode
 
@@ -124,24 +117,24 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="flex absolute w-full md:hidden bg-white/95 dark:bg-gray-900/95 flex-col md:flex-row md:space-x-2 items-end font-semibold mb-2 transition-all duration-500 ease-out backdrop-blur-md border-b border-gray-200 dark:border-gray-700 shadow-lg animate-in slide-in-from-top">
+                <div className="absolute left-0 right-0 flex w-full flex-col items-end border-b border-[var(--border-subtle)] bg-[var(--bg-card)]/95 font-semibold text-[var(--text-ink)] shadow-lg backdrop-blur-md transition-all duration-500 ease-out animate-in slide-in-from-top">
                     <Link
                         href="/"
-                        className="w-full text-right hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-3 rounded-lg transition-all duration-300 hover:-translate-x-1 active:scale-95"
+                        className="w-full px-4 py-3 text-right hover:bg-[#eef0f7] transition-all duration-300"
                         onClick={toggleNavbar}
                     >
                         Home
                     </Link>
                     <Link
                         href="/projects"
-                        className="w-full text-right hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-3 rounded-lg transition-all duration-300 hover:-translate-x-1 active:scale-95"
+                        className="w-full px-4 py-3 text-right hover:bg-[#eef0f7] transition-all duration-300"
                         onClick={toggleNavbar}
                     >
                         Projects
                     </Link>
                     <Link
                         href="/blogs"
-                        className="w-full text-right hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-3 rounded-lg transition-all duration-300 hover:-translate-x-1 active:scale-95"
+                        className="w-full px-4 py-3 text-right hover:bg-[#eef0f7] transition-all duration-300"
                         onClick={toggleNavbar}
                     >
                         Blogs
@@ -149,7 +142,7 @@ export default function Navbar() {
                     <Link
                         href="https://chat.codebhaiya.com"
                         target="_blank"
-                        className="w-full flex items-center justify-end gap-2 bg-linear-to-r from-violet-600 to-indigo-600 text-white px-4 py-3 rounded-lg transition-all duration-300 hover:-translate-x-1 active:scale-95"
+                        className="w-full flex items-center justify-end gap-2 bg-[var(--accent-peach)] px-4 py-3 text-[var(--text-ink)] transition-all duration-300"
                         onClick={toggleNavbar}
                     >
                         <span className="relative flex h-2 w-2">
