@@ -540,16 +540,35 @@ p {
 }
 
 .dark {
+    color-scheme: dark;
+    --bg-canvas: #111318;
+    --bg-card: #191c24;
+    --border-subtle: #303646;
+    --text-ink: #f2f4f8;
+    --text-body: #c8cddd;
+    --text-muted: #9aa3b8;
+    --accent-navy: #a9baff;
+    --accent-peach: #f1a77e;
+    --accent-pink-marker: #ed7eaa;
+    --avatar-bg: #3c4b79;
     --background: var(--bg-canvas);
     --foreground: var(--text-ink);
     --card: var(--bg-card);
     --card-foreground: var(--text-ink);
     --primary: var(--accent-navy);
     --primary-foreground: #fff;
-    --secondary: #eef0f7;
+    --secondary: #252a36;
     --secondary-foreground: var(--text-ink);
+    --muted: #252a36;
     --muted-foreground: var(--text-muted);
+    --accent: #252a36;
+    --accent-foreground: var(--text-ink);
     --border: var(--border-subtle);
+    --input: var(--border-subtle);
+}
+
+.light {
+    color-scheme: light;
 }
 
 .editorial-heading {
@@ -672,6 +691,17 @@ p {
     color: var(--text-ink);
 }
 
+.dark .button-primary {
+    background: #a9baff;
+    color: #141b34;
+}
+
+.dark .button-secondary {
+    background: #252a36;
+    border-color: #454d60;
+    color: var(--text-ink);
+}
+
 .hero-links {
     display: flex;
     flex-direction: column;
@@ -686,9 +716,9 @@ p {
 }
 
 .hero-icon-link:hover {
-    background: var(--accent-peach);
-    border-color: var(--accent-peach);
-    color: var(--text-ink);
+    background: #bfdbfe;
+    border-color: #93c5fd;
+    color: #1e3a5f;
 }
 
 .project-card,

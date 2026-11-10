@@ -48,7 +48,7 @@ export default function WhoAmI() {
                 </div>
                 <div className="hero-links">
                     <Link
-                        className="hero-icon-link hover:bg-black hover:text-white"
+                        className="hero-icon-link"
                         href={handles.github}
                         target="_blank"
                     >
@@ -56,7 +56,7 @@ export default function WhoAmI() {
                         Github
                     </Link>
                     <Link
-                        className="hero-icon-link hover:bg-black hover:text-white"
+                        className="hero-icon-link"
                         href={handles.linkedin}
                         target="_blank"
                     >
@@ -64,7 +64,7 @@ export default function WhoAmI() {
                         LinkedIn
                     </Link>
                     <Link
-                        className="hero-icon-link hover:bg-black hover:text-white"
+                        className="hero-icon-link"
                         href="/resume.pdf"
                         target="_blank"
                     >

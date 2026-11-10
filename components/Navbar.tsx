@@ -69,20 +69,20 @@ export default function Navbar() {
                 <div className="hidden md:flex flex-wrap items-center justify-end gap-1 font-semibold text-[var(--text-ink)]">
                     <Link
                         href="/"
-                        className="rounded-full px-4 py-2 hover:bg-[#eef0f7] hover:text-[var(--accent-navy)] transition-all duration-300"
+                        className="rounded-full px-4 py-2 hover:bg-[var(--secondary)] hover:text-[var(--accent-navy)] transition-all duration-300"
                     >
                         Home
                     </Link>
                     <Link
                         href="/projects"
-                        className="rounded-full px-4 py-2 hover:bg-[#eef0f7] hover:text-[var(--accent-navy)] transition-all duration-300"
+                        className="rounded-full px-4 py-2 hover:bg-[var(--secondary)] hover:text-[var(--accent-navy)] transition-all duration-300"
                     >
                         Projects
                     </Link>
                     <Link
                         href="https://www.codebhaiya.com/blogs"
                         target="_blank"
-                        className="rounded-full px-4 py-2 hover:bg-[#eef0f7] hover:text-[var(--accent-navy)] transition-all duration-300"
+                        className="rounded-full px-4 py-2 hover:bg-[var(--secondary)] hover:text-[var(--accent-navy)] transition-all duration-300"
                     >
                         Blogs
                     </Link>
@@ -120,21 +120,21 @@ export default function Navbar() {
                 <div className="absolute left-0 right-0 flex w-full flex-col items-end border-b border-[var(--border-subtle)] bg-[var(--bg-card)]/95 font-semibold text-[var(--text-ink)] shadow-lg backdrop-blur-md transition-all duration-500 ease-out animate-in slide-in-from-top">
                     <Link
                         href="/"
-                        className="w-full px-4 py-3 text-right hover:bg-[#eef0f7] transition-all duration-300"
+                        className="w-full px-4 py-3 text-right hover:bg-[var(--secondary)] transition-all duration-300"
                         onClick={toggleNavbar}
                     >
                         Home
                     </Link>
                     <Link
                         href="/projects"
-                        className="w-full px-4 py-3 text-right hover:bg-[#eef0f7] transition-all duration-300"
+                        className="w-full px-4 py-3 text-right hover:bg-[var(--secondary)] transition-all duration-300"
                         onClick={toggleNavbar}
                     >
                         Projects
                     </Link>
                     <Link
                         href="/blogs"
-                        className="w-full px-4 py-3 text-right hover:bg-[#eef0f7] transition-all duration-300"
+                        className="w-full px-4 py-3 text-right hover:bg-[var(--secondary)] transition-all duration-300"
                         onClick={toggleNavbar}
                     >
                         Blogs
